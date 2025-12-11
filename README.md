@@ -1,100 +1,29 @@
-# One-for-All: Bridge the Gap Between Heterogeneous Architectures in Knowledge Distillation
+This repository is for “RESIDUAL CLASS ATTENTION TRANSFER : SIMPLIFYING KNOWLEDGE DISTILLATION FROM VISION FOUNDATION MODELS TO CNNS”
+<img width="2489" height="961" alt="image" src="https://github.com/user-attachments/assets/53dcfdde-ca3a-4122-a376-eedc83bad396" />
 
-Official PyTorch implementation of **OFA-KD**, from the following paper: \
-One-for-All: Bridge the Gap Between Heterogeneous Architectures in Knowledge Distillation \
-Zhiwei Hao, Jianyuan Guo, Kai Han, Yehui Tang, Han Hu, Yunhe Wang, Chang Xu
+image
+The training log can be viewed in the /output/train directory. 训练日志可以查看，在/output/train下 For how to reproduce, please refer to the file get_start. txt
 
-This paper studies using **heterogeneous** teacher and student models for knowledge distillation (KD) and proposes a one-for-all KD framework (OFA-KD). In this framework, intermediate features are projected into an aligned latent space to discard architecture-specific information, and an adaptive target enhancement scheme is proposed to prevent the student from being disturbed by irrelevant information.
+如何复现，请参考文件get_start.txt
 
-<img src="assets/ofa.png" width="500px"/>
+下面涉及到路径的地方，需要更换为自己的路径，例如"train.py"(替换为你的train.py路径) "--config xxxx"（xxx替换为你的配置文件路径） "--teacher-pretrained xxxx" （xxxx替换为你的教师模型文件路径）"/data/cifar100"（替换为你的数据集所在路径）这四项换成你的路径
 
-If you find this project useful in your research, please cite:
+For example, use the command for our method-RCAT:
 
-```
-@inproceedings{hao2023ofa,
-  author    = {Zhiwei Hao and Jianyuan Guo and Kai Han and Yehui Tang and Han Hu and Yunhe Wang and Chang Xu},
-  title     = {One-for-All: Bridge the Gap Between Heterogeneous Architectures in Knowledge Distillation},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2023}
-}
-```
+例如，使用该命令复现我们的方法-RCAT:
 
-## Usage
-First, clone the repository locally:
+CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py
+/nfs4/wangyb/projects/OFAKD/data/cifar100 --config /nfs4/wangyb/projects/RCAT/configs/cifar/cnn.yaml
+--model resnet18_proj_dim_384 --teacher dinov2s_finetuehead --teacher-pretrained /nfs4/wangyb/projects/OFAKD/teacher_checkpoint/dinov2_cifar100_head_best.pth
+-d cifar100 --num-classes 100 --distiller rcat
 
-```
-git clone https://github.com/Hao840/OFAKD.git
-```
+use the command for other baseline methods:
 
-Then, install PyTorch and [timm 0.6.5](https://github.com/huggingface/pytorch-image-models/tree/v0.6.5)
+使用该指令对其他基线方法：
 
-```
-conda install -c pytorch pytorch torchvision
-pip install timm==0.6.5
-```
+CUDA_VISIBLE_DEVICES=0 python train.py
+/data/cifar100 --config configs/cifar/cnn.yaml
+--model resnet18 --teacher dinov2s_finetuehead --teacher-pretrained teacher_checkpoint/dinov2_cifar100_head_best.pth
+-d cifar100 --num-classes 100 --distiller kd
 
-Our results are produced with `torch==1.10.2+cu113 torchvision==0.11.3+cu113 timm==0.6.5`. Other versions might also work.
-
-### Data preparation
-
-Download and extract ImageNet train and val images from http://image-net.org/. The directory structure is:
-
-```
-│path/to/imagenet/
-├──train/
-│  ├── n01440764
-│  │   ├── n01440764_10026.JPEG
-│  │   ├── n01440764_10027.JPEG
-│  │   ├── ......
-│  ├── ......
-├──val/
-│  ├── n01440764
-│  │   ├── ILSVRC2012_val_00000293.JPEG
-│  │   ├── ILSVRC2012_val_00002138.JPEG
-│  │   ├── ......
-│  ├── ......
-```
-
-### Training on ImageNet
-
-To train a resnet18 student using [DeiT-T teacher](https://dl.fbaipublicfiles.com/deit/deit_tiny_patch16_224-a1311bcf.pth) on ImageNet on a single node with 8 GPUs, run:
-
-```
-python -m torch.distributed.launch --nproc_per_node=8 train.py /path/to/imagenet --config configs/imagenet/cnn.yaml --model resnet18 --teacher deit_tiny_patch16_224 --teacher-pretrained /path/to/teacher_checkpoint --distiller ofa --ofa-eps 1.5
-```
-
-Other results can be reproduced following similar commands by modifying:
-
-`--config `: configuration of training strategy. 
-
-`--model`: student model architecture.
-
-`--teacher`: teacher model architecture.
-
-`--teacher-pretrained`: path to checkpoint of pretrained teacher model.
-
-`--distiller`: which KD algorithm to use.
-
-For information about other tunable parameters, please refer to `train.py`.
-
-### Training on CIFAR-100
-
-To train a resnet18 student using Swin-T teacher on CIFAR-100 on a single node with 8 GPUs, run:
-
-```
-python -m torch.distributed.launch --nproc_per_node=8 train.py /path/to/cifar100 --config configs/cifar/cnn.yaml --model resnet18 --teacher swin_tiny_patch4_window7_224 --teacher-pretrained /path/to/teacher_checkpoint --num-classes 100 --distiller ofa --ofa-eps 1.0
-```
-
-Pretrained teacher models can be found [here](https://github.com/Hao840/OFAKD/releases/tag/checkpoint-cifar100)
-
-### Custom usage
-
-**KD algorithm**: create new KD algorithm following examples in the `./distillers` folder.
-
-**Model architecture**: create new model architecture following examples in the `./custom_model` folder. If intermediate features of the new model are required for KD, rewrite its `forward()` method following examples in the `./custom_forward` folder.
-
-## Acknowledgement
-
-This repository is built using the [timm](https://github.com/rwightman/pytorch-image-models) and the [mdistiller](https://github.com/megvii-research/mdistiller) library.
-
-
+注意：train.py --config --teacher-pretrained /data/cifar100这四项换成你的路径
