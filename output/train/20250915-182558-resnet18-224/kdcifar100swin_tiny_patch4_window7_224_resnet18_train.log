@@ -1,0 +1,411 @@
+2025-09-15 18:25:53,772 -                train: [    INFO] - Training with a single process on 1 GPUs.
+2025-09-15 18:25:55,938 -  timm.models.helpers: [    INFO] - Loaded  from checkpoint '/nfs4/wangyb/projects/OFAKD/teacher_checkpoint/swin_tiny_patch4_window7_224_cifar100.pth'
+2025-09-15 18:25:56,380 -                train: [    INFO] - Model resnet18 created, param count:11227812
+2025-09-15 18:25:56,380 -     timm.data.config: [    INFO] - Data processing configuration for current model + dataset:
+2025-09-15 18:25:56,382 -     timm.data.config: [    INFO] - 	input_size: (3, 224, 224)
+2025-09-15 18:25:56,382 -     timm.data.config: [    INFO] - 	interpolation: bilinear
+2025-09-15 18:25:56,382 -     timm.data.config: [    INFO] - 	mean: (0.485, 0.456, 0.406)
+2025-09-15 18:25:56,382 -     timm.data.config: [    INFO] - 	std: (0.229, 0.224, 0.225)
+2025-09-15 18:25:56,383 -     timm.data.config: [    INFO] - 	crop_pct: 0.875
+2025-09-15 18:25:58,656 -                train: [    INFO] - 
+-------------------------------
+Learnable parameters
+Student: 11.23M
+Extra: 0.00M
+-------------------------------
+2025-09-15 18:25:58,817 -                train: [    INFO] - AMP not enabled. Training in float32.
+2025-09-15 18:25:58,817 -                train: [    INFO] - Scheduled epochs: 240
+2025-09-15 18:26:00,064 -                train: [    INFO] - Train: 0 [   0/781 (  0%)]  Loss: 7.158 (7.16)  Loss_gt: 4.605 (4.61)  Loss_kd: 2.552 (2.55) LR: 1.000e-04
+2025-09-15 18:26:18,490 -                train: [    INFO] - Train: 0 [ 200/781 ( 26%)]  Loss: 7.251 (7.20)  Loss_gt: 4.556 (4.60)  Loss_kd: 2.695 (2.61) LR: 1.000e-04
+2025-09-15 18:26:37,125 -                train: [    INFO] - Train: 0 [ 400/781 ( 51%)]  Loss: 6.928 (7.13)  Loss_gt: 4.480 (4.57)  Loss_kd: 2.448 (2.56) LR: 1.000e-04
+2025-09-15 18:26:55,706 -                train: [    INFO] - Train: 0 [ 600/781 ( 77%)]  Loss: 6.875 (7.07)  Loss_gt: 4.512 (4.54)  Loss_kd: 2.362 (2.53) LR: 1.000e-04
+2025-09-15 18:27:12,401 -                train: [    INFO] - Train: 0 [ 780/781 (100%)]  Loss: 6.602 (7.03)  Loss_gt: 4.387 (4.53)  Loss_kd: 2.215 (2.51) LR: 1.000e-04
+2025-09-15 18:27:12,797 -                train: [    INFO] - Test: [   0/156]  Time: 0.390 (0.390)  Loss:  4.4468 (4.4468)  Acc@1:  4.6875 ( 4.6875)  Acc@5: 10.9375 (10.9375)
+2025-09-15 18:27:15,604 -                train: [    INFO] - Test: [ 156/156]  Time: 0.053 (0.020)  Loss:  4.4345 (4.4157)  Acc@1:  0.0000 ( 4.6200)  Acc@5: 12.5000 (15.4700)
+2025-09-15 18:27:15,972 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:27:16,173 -                train: [    INFO] - Train: 1 [   0/781 (  0%)]  Loss: 6.962 (6.96)  Loss_gt: 4.449 (4.45)  Loss_kd: 2.513 (2.51) LR: 1.673e-02
+2025-09-15 18:27:34,769 -                train: [    INFO] - Train: 1 [ 200/781 ( 26%)]  Loss: 6.238 (6.51)  Loss_gt: 4.128 (4.26)  Loss_kd: 2.110 (2.25) LR: 1.673e-02
+2025-09-15 18:27:53,493 -                train: [    INFO] - Train: 1 [ 400/781 ( 51%)]  Loss: 6.299 (6.40)  Loss_gt: 4.194 (4.20)  Loss_kd: 2.105 (2.21) LR: 1.673e-02
+2025-09-15 18:28:12,181 -                train: [    INFO] - Train: 1 [ 600/781 ( 77%)]  Loss: 6.234 (6.32)  Loss_gt: 4.053 (4.16)  Loss_kd: 2.181 (2.16) LR: 1.673e-02
+2025-09-15 18:28:28,963 -                train: [    INFO] - Train: 1 [ 780/781 (100%)]  Loss: 6.039 (6.26)  Loss_gt: 4.045 (4.13)  Loss_kd: 1.994 (2.13) LR: 1.673e-02
+2025-09-15 18:28:29,069 -                train: [    INFO] - Test: [   0/156]  Time: 0.101 (0.101)  Loss:  3.7138 (3.7138)  Acc@1:  9.3750 ( 9.3750)  Acc@5: 39.0625 (39.0625)
+2025-09-15 18:28:32,173 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.020)  Loss:  3.8153 (3.7506)  Acc@1:  6.2500 (11.6000)  Acc@5: 31.2500 (35.4800)
+2025-09-15 18:28:32,522 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:28:32,719 -                train: [    INFO] - Train: 2 [   0/781 (  0%)]  Loss: 5.581 (5.58)  Loss_gt: 3.873 (3.87)  Loss_kd: 1.709 (1.71) LR: 3.337e-02
+2025-09-15 18:28:51,305 -                train: [    INFO] - Train: 2 [ 200/781 ( 26%)]  Loss: 5.712 (6.06)  Loss_gt: 3.875 (4.03)  Loss_kd: 1.836 (2.03) LR: 3.337e-02
+2025-09-15 18:29:09,850 -                train: [    INFO] - Train: 2 [ 400/781 ( 51%)]  Loss: 5.891 (6.03)  Loss_gt: 3.935 (4.02)  Loss_kd: 1.956 (2.01) LR: 3.337e-02
+2025-09-15 18:29:28,437 -                train: [    INFO] - Train: 2 [ 600/781 ( 77%)]  Loss: 5.841 (5.97)  Loss_gt: 4.007 (3.99)  Loss_kd: 1.834 (1.98) LR: 3.337e-02
+2025-09-15 18:29:45,226 -                train: [    INFO] - Train: 2 [ 780/781 (100%)]  Loss: 5.610 (5.92)  Loss_gt: 3.754 (3.96)  Loss_kd: 1.856 (1.96) LR: 3.337e-02
+2025-09-15 18:29:45,344 -                train: [    INFO] - Test: [   0/156]  Time: 0.113 (0.113)  Loss:  3.6873 (3.6873)  Acc@1: 20.3125 (20.3125)  Acc@5: 43.7500 (43.7500)
+2025-09-15 18:29:48,388 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.020)  Loss:  3.8591 (3.7122)  Acc@1: 25.0000 (14.7600)  Acc@5: 37.5000 (38.0000)
+2025-09-15 18:29:48,662 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:29:48,858 -                train: [    INFO] - Train: 3 [   0/781 (  0%)]  Loss: 5.786 (5.79)  Loss_gt: 3.876 (3.88)  Loss_kd: 1.910 (1.91) LR: 5.000e-02
+2025-09-15 18:30:07,493 -                train: [    INFO] - Train: 3 [ 200/781 ( 26%)]  Loss: 5.721 (5.74)  Loss_gt: 3.852 (3.86)  Loss_kd: 1.868 (1.87) LR: 5.000e-02
+2025-09-15 18:30:26,222 -                train: [    INFO] - Train: 3 [ 400/781 ( 51%)]  Loss: 5.303 (5.64)  Loss_gt: 3.667 (3.82)  Loss_kd: 1.637 (1.82) LR: 5.000e-02
+2025-09-15 18:30:44,825 -                train: [    INFO] - Train: 3 [ 600/781 ( 77%)]  Loss: 5.293 (5.58)  Loss_gt: 3.544 (3.79)  Loss_kd: 1.749 (1.79) LR: 5.000e-02
+2025-09-15 18:31:01,521 -                train: [    INFO] - Train: 3 [ 780/781 (100%)]  Loss: 5.435 (5.53)  Loss_gt: 3.781 (3.76)  Loss_kd: 1.653 (1.77) LR: 5.000e-02
+2025-09-15 18:31:01,627 -                train: [    INFO] - Test: [   0/156]  Time: 0.100 (0.100)  Loss:  3.0686 (3.0686)  Acc@1: 26.5625 (26.5625)  Acc@5: 51.5625 (51.5625)
+2025-09-15 18:31:04,614 -                train: [    INFO] - Test: [ 156/156]  Time: 0.009 (0.020)  Loss:  3.1855 (3.1108)  Acc@1: 12.5000 (23.1300)  Acc@5: 62.5000 (53.0600)
+2025-09-15 18:31:04,883 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:31:05,076 -                train: [    INFO] - Train: 4 [   0/781 (  0%)]  Loss: 4.999 (5.00)  Loss_gt: 3.534 (3.53)  Loss_kd: 1.465 (1.46) LR: 5.000e-02
+2025-09-15 18:31:23,659 -                train: [    INFO] - Train: 4 [ 200/781 ( 26%)]  Loss: 5.483 (5.20)  Loss_gt: 3.814 (3.60)  Loss_kd: 1.669 (1.60) LR: 5.000e-02
+2025-09-15 18:31:42,339 -                train: [    INFO] - Train: 4 [ 400/781 ( 51%)]  Loss: 5.128 (5.14)  Loss_gt: 3.622 (3.56)  Loss_kd: 1.506 (1.57) LR: 5.000e-02
+2025-09-15 18:32:00,880 -                train: [    INFO] - Train: 4 [ 600/781 ( 77%)]  Loss: 4.816 (5.07)  Loss_gt: 3.479 (3.53)  Loss_kd: 1.337 (1.54) LR: 5.000e-02
+2025-09-15 18:32:17,638 -                train: [    INFO] - Train: 4 [ 780/781 (100%)]  Loss: 4.749 (5.01)  Loss_gt: 3.349 (3.50)  Loss_kd: 1.400 (1.51) LR: 5.000e-02
+2025-09-15 18:32:17,749 -                train: [    INFO] - Test: [   0/156]  Time: 0.105 (0.105)  Loss:  2.6632 (2.6632)  Acc@1: 37.5000 (37.5000)  Acc@5: 68.7500 (68.7500)
+2025-09-15 18:32:20,762 -                train: [    INFO] - Test: [ 156/156]  Time: 0.009 (0.020)  Loss:  2.5574 (2.7379)  Acc@1: 37.5000 (31.1200)  Acc@5: 62.5000 (62.1600)
+2025-09-15 18:32:21,096 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:32:21,295 -                train: [    INFO] - Train: 5 [   0/781 (  0%)]  Loss: 5.052 (5.05)  Loss_gt: 3.627 (3.63)  Loss_kd: 1.425 (1.43) LR: 5.000e-02
+2025-09-15 18:32:39,858 -                train: [    INFO] - Train: 5 [ 200/781 ( 26%)]  Loss: 4.953 (4.72)  Loss_gt: 3.544 (3.35)  Loss_kd: 1.409 (1.37) LR: 5.000e-02
+2025-09-15 18:32:58,530 -                train: [    INFO] - Train: 5 [ 400/781 ( 51%)]  Loss: 4.379 (4.70)  Loss_gt: 3.070 (3.34)  Loss_kd: 1.309 (1.36) LR: 5.000e-02
+2025-09-15 18:33:17,135 -                train: [    INFO] - Train: 5 [ 600/781 ( 77%)]  Loss: 4.691 (4.67)  Loss_gt: 3.322 (3.33)  Loss_kd: 1.369 (1.34) LR: 5.000e-02
+2025-09-15 18:33:33,985 -                train: [    INFO] - Train: 5 [ 780/781 (100%)]  Loss: 4.268 (4.64)  Loss_gt: 3.055 (3.31)  Loss_kd: 1.212 (1.33) LR: 5.000e-02
+2025-09-15 18:33:34,091 -                train: [    INFO] - Test: [   0/156]  Time: 0.100 (0.100)  Loss:  2.4909 (2.4909)  Acc@1: 42.1875 (42.1875)  Acc@5: 68.7500 (68.7500)
+2025-09-15 18:33:36,907 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.4734 (2.5382)  Acc@1: 43.7500 (35.5700)  Acc@5: 62.5000 (67.7400)
+2025-09-15 18:33:37,206 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:33:37,404 -                train: [    INFO] - Train: 6 [   0/781 (  0%)]  Loss: 4.820 (4.82)  Loss_gt: 3.432 (3.43)  Loss_kd: 1.387 (1.39) LR: 5.000e-02
+2025-09-15 18:33:56,060 -                train: [    INFO] - Train: 6 [ 200/781 ( 26%)]  Loss: 4.666 (4.48)  Loss_gt: 3.359 (3.22)  Loss_kd: 1.307 (1.26) LR: 5.000e-02
+2025-09-15 18:34:14,648 -                train: [    INFO] - Train: 6 [ 400/781 ( 51%)]  Loss: 4.252 (4.46)  Loss_gt: 3.097 (3.21)  Loss_kd: 1.156 (1.25) LR: 5.000e-02
+2025-09-15 18:34:33,034 -                train: [    INFO] - Train: 6 [ 600/781 ( 77%)]  Loss: 4.289 (4.44)  Loss_gt: 3.137 (3.20)  Loss_kd: 1.152 (1.24) LR: 5.000e-02
+2025-09-15 18:34:49,718 -                train: [    INFO] - Train: 6 [ 780/781 (100%)]  Loss: 4.040 (4.42)  Loss_gt: 2.997 (3.19)  Loss_kd: 1.043 (1.23) LR: 5.000e-02
+2025-09-15 18:34:49,821 -                train: [    INFO] - Test: [   0/156]  Time: 0.097 (0.097)  Loss:  2.3990 (2.3990)  Acc@1: 43.7500 (43.7500)  Acc@5: 67.1875 (67.1875)
+2025-09-15 18:34:52,509 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.018)  Loss:  2.1959 (2.4892)  Acc@1: 56.2500 (35.2900)  Acc@5: 81.2500 (68.9500)
+2025-09-15 18:34:52,922 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:34:53,105 -                train: [    INFO] - Train: 7 [   0/781 (  0%)]  Loss: 4.007 (4.01)  Loss_gt: 2.858 (2.86)  Loss_kd: 1.149 (1.15) LR: 5.000e-02
+2025-09-15 18:35:11,547 -                train: [    INFO] - Train: 7 [ 200/781 ( 26%)]  Loss: 4.118 (4.29)  Loss_gt: 2.898 (3.11)  Loss_kd: 1.220 (1.18) LR: 5.000e-02
+2025-09-15 18:35:29,995 -                train: [    INFO] - Train: 7 [ 400/781 ( 51%)]  Loss: 4.060 (4.28)  Loss_gt: 2.966 (3.11)  Loss_kd: 1.094 (1.17) LR: 5.000e-02
+2025-09-15 18:35:48,393 -                train: [    INFO] - Train: 7 [ 600/781 ( 77%)]  Loss: 4.147 (4.27)  Loss_gt: 2.823 (3.11)  Loss_kd: 1.325 (1.16) LR: 5.000e-02
+2025-09-15 18:36:04,995 -                train: [    INFO] - Train: 7 [ 780/781 (100%)]  Loss: 4.302 (4.26)  Loss_gt: 3.051 (3.11)  Loss_kd: 1.250 (1.16) LR: 5.000e-02
+2025-09-15 18:36:05,095 -                train: [    INFO] - Test: [   0/156]  Time: 0.095 (0.095)  Loss:  2.3010 (2.3010)  Acc@1: 37.5000 (37.5000)  Acc@5: 75.0000 (75.0000)
+2025-09-15 18:36:08,030 -                train: [    INFO] - Test: [ 156/156]  Time: 0.009 (0.019)  Loss:  1.8729 (2.2730)  Acc@1: 43.7500 (40.6600)  Acc@5: 75.0000 (73.4300)
+2025-09-15 18:36:08,317 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:36:08,514 -                train: [    INFO] - Train: 8 [   0/781 (  0%)]  Loss: 4.026 (4.03)  Loss_gt: 2.932 (2.93)  Loss_kd: 1.094 (1.09) LR: 5.000e-02
+2025-09-15 18:36:26,926 -                train: [    INFO] - Train: 8 [ 200/781 ( 26%)]  Loss: 4.758 (4.17)  Loss_gt: 3.474 (3.05)  Loss_kd: 1.283 (1.11) LR: 5.000e-02
+2025-09-15 18:36:45,376 -                train: [    INFO] - Train: 8 [ 400/781 ( 51%)]  Loss: 4.492 (4.16)  Loss_gt: 3.184 (3.04)  Loss_kd: 1.307 (1.12) LR: 5.000e-02
+2025-09-15 18:37:03,762 -                train: [    INFO] - Train: 8 [ 600/781 ( 77%)]  Loss: 4.229 (4.15)  Loss_gt: 3.074 (3.04)  Loss_kd: 1.155 (1.11) LR: 5.000e-02
+2025-09-15 18:37:20,313 -                train: [    INFO] - Train: 8 [ 780/781 (100%)]  Loss: 3.955 (4.15)  Loss_gt: 2.873 (3.04)  Loss_kd: 1.082 (1.11) LR: 5.000e-02
+2025-09-15 18:37:20,421 -                train: [    INFO] - Test: [   0/156]  Time: 0.103 (0.103)  Loss:  1.8454 (1.8454)  Acc@1: 56.2500 (56.2500)  Acc@5: 78.1250 (78.1250)
+2025-09-15 18:37:23,269 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.0449 (2.1356)  Acc@1: 56.2500 (44.1900)  Acc@5: 68.7500 (77.2600)
+2025-09-15 18:37:23,532 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:37:23,722 -                train: [    INFO] - Train: 9 [   0/781 (  0%)]  Loss: 4.336 (4.34)  Loss_gt: 3.127 (3.13)  Loss_kd: 1.209 (1.21) LR: 5.000e-02
+2025-09-15 18:37:42,215 -                train: [    INFO] - Train: 9 [ 200/781 ( 26%)]  Loss: 3.823 (4.07)  Loss_gt: 2.824 (2.99)  Loss_kd: 0.9991 (1.08) LR: 5.000e-02
+2025-09-15 18:38:00,772 -                train: [    INFO] - Train: 9 [ 400/781 ( 51%)]  Loss: 3.930 (4.08)  Loss_gt: 2.770 (3.00)  Loss_kd: 1.160 (1.08) LR: 5.000e-02
+2025-09-15 18:38:19,241 -                train: [    INFO] - Train: 9 [ 600/781 ( 77%)]  Loss: 4.551 (4.09)  Loss_gt: 3.331 (3.00)  Loss_kd: 1.220 (1.08) LR: 5.000e-02
+2025-09-15 18:38:35,873 -                train: [    INFO] - Train: 9 [ 780/781 (100%)]  Loss: 4.255 (4.07)  Loss_gt: 3.076 (3.00)  Loss_kd: 1.179 (1.07) LR: 5.000e-02
+2025-09-15 18:38:35,979 -                train: [    INFO] - Test: [   0/156]  Time: 0.101 (0.101)  Loss:  1.9517 (1.9517)  Acc@1: 46.8750 (46.8750)  Acc@5: 81.2500 (81.2500)
+2025-09-15 18:38:38,880 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.1240 (2.1927)  Acc@1: 50.0000 (43.7700)  Acc@5: 81.2500 (75.2700)
+2025-09-15 18:38:39,224 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-0.pth.tar', 4.62)
+
+2025-09-15 18:38:39,415 -                train: [    INFO] - Train: 10 [   0/781 (  0%)]  Loss: 4.325 (4.32)  Loss_gt: 3.179 (3.18)  Loss_kd: 1.146 (1.15) LR: 5.000e-02
+2025-09-15 18:38:57,903 -                train: [    INFO] - Train: 10 [ 200/781 ( 26%)]  Loss: 4.043 (4.02)  Loss_gt: 2.973 (2.97)  Loss_kd: 1.070 (1.05) LR: 5.000e-02
+2025-09-15 18:39:16,452 -                train: [    INFO] - Train: 10 [ 400/781 ( 51%)]  Loss: 4.060 (4.01)  Loss_gt: 2.961 (2.97)  Loss_kd: 1.100 (1.04) LR: 5.000e-02
+2025-09-15 18:39:34,917 -                train: [    INFO] - Train: 10 [ 600/781 ( 77%)]  Loss: 3.966 (4.01)  Loss_gt: 2.937 (2.97)  Loss_kd: 1.029 (1.04) LR: 5.000e-02
+2025-09-15 18:39:51,566 -                train: [    INFO] - Train: 10 [ 780/781 (100%)]  Loss: 3.982 (4.00)  Loss_gt: 2.936 (2.96)  Loss_kd: 1.047 (1.04) LR: 5.000e-02
+2025-09-15 18:39:51,662 -                train: [    INFO] - Test: [   0/156]  Time: 0.089 (0.089)  Loss:  2.1110 (2.1110)  Acc@1: 42.1875 (42.1875)  Acc@5: 71.8750 (71.8750)
+2025-09-15 18:39:54,368 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.018)  Loss:  1.9477 (2.1523)  Acc@1: 50.0000 (45.0900)  Acc@5: 81.2500 (76.2700)
+2025-09-15 18:39:54,685 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-1.pth.tar', 11.6)
+
+2025-09-15 18:39:54,865 -                train: [    INFO] - Train: 11 [   0/781 (  0%)]  Loss: 3.681 (3.68)  Loss_gt: 2.651 (2.65)  Loss_kd: 1.030 (1.03) LR: 5.000e-02
+2025-09-15 18:40:13,352 -                train: [    INFO] - Train: 11 [ 200/781 ( 26%)]  Loss: 3.801 (3.97)  Loss_gt: 2.703 (2.93)  Loss_kd: 1.097 (1.04) LR: 5.000e-02
+2025-09-15 18:40:31,828 -                train: [    INFO] - Train: 11 [ 400/781 ( 51%)]  Loss: 3.985 (3.98)  Loss_gt: 2.899 (2.93)  Loss_kd: 1.086 (1.04) LR: 5.000e-02
+2025-09-15 18:40:50,313 -                train: [    INFO] - Train: 11 [ 600/781 ( 77%)]  Loss: 3.881 (3.98)  Loss_gt: 2.719 (2.94)  Loss_kd: 1.162 (1.04) LR: 5.000e-02
+2025-09-15 18:41:07,017 -                train: [    INFO] - Train: 11 [ 780/781 (100%)]  Loss: 3.761 (3.97)  Loss_gt: 2.798 (2.93)  Loss_kd: 0.9631 (1.03) LR: 5.000e-02
+2025-09-15 18:41:07,129 -                train: [    INFO] - Test: [   0/156]  Time: 0.107 (0.107)  Loss:  1.8521 (1.8521)  Acc@1: 53.1250 (53.1250)  Acc@5: 81.2500 (81.2500)
+2025-09-15 18:41:09,873 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.018)  Loss:  1.8168 (2.1001)  Acc@1: 56.2500 (44.9100)  Acc@5: 75.0000 (77.0200)
+2025-09-15 18:41:10,272 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-2.pth.tar', 14.76)
+
+2025-09-15 18:41:10,470 -                train: [    INFO] - Train: 12 [   0/781 (  0%)]  Loss: 3.794 (3.79)  Loss_gt: 2.864 (2.86)  Loss_kd: 0.9307 (0.931) LR: 5.000e-02
+2025-09-15 18:41:28,949 -                train: [    INFO] - Train: 12 [ 200/781 ( 26%)]  Loss: 3.688 (3.90)  Loss_gt: 2.844 (2.89)  Loss_kd: 0.8445 (1.00) LR: 5.000e-02
+2025-09-15 18:41:47,543 -                train: [    INFO] - Train: 12 [ 400/781 ( 51%)]  Loss: 3.852 (3.92)  Loss_gt: 2.797 (2.90)  Loss_kd: 1.056 (1.02) LR: 5.000e-02
+2025-09-15 18:42:05,978 -                train: [    INFO] - Train: 12 [ 600/781 ( 77%)]  Loss: 3.681 (3.92)  Loss_gt: 2.849 (2.90)  Loss_kd: 0.8321 (1.01) LR: 5.000e-02
+2025-09-15 18:42:22,528 -                train: [    INFO] - Train: 12 [ 780/781 (100%)]  Loss: 3.726 (3.92)  Loss_gt: 2.833 (2.91)  Loss_kd: 0.8925 (1.01) LR: 5.000e-02
+2025-09-15 18:42:22,633 -                train: [    INFO] - Test: [   0/156]  Time: 0.100 (0.100)  Loss:  2.0727 (2.0727)  Acc@1: 50.0000 (50.0000)  Acc@5: 73.4375 (73.4375)
+2025-09-15 18:42:25,542 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.4151 (2.1281)  Acc@1: 37.5000 (44.1900)  Acc@5: 68.7500 (75.8200)
+2025-09-15 18:42:25,868 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-12.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-3.pth.tar', 23.13)
+
+2025-09-15 18:42:26,048 -                train: [    INFO] - Train: 13 [   0/781 (  0%)]  Loss: 3.942 (3.94)  Loss_gt: 2.940 (2.94)  Loss_kd: 1.002 (1.00) LR: 5.000e-02
+2025-09-15 18:42:44,519 -                train: [    INFO] - Train: 13 [ 200/781 ( 26%)]  Loss: 4.345 (3.90)  Loss_gt: 3.105 (2.91)  Loss_kd: 1.240 (0.991) LR: 5.000e-02
+2025-09-15 18:43:03,110 -                train: [    INFO] - Train: 13 [ 400/781 ( 51%)]  Loss: 4.045 (3.90)  Loss_gt: 2.880 (2.90)  Loss_kd: 1.165 (1.00) LR: 5.000e-02
+2025-09-15 18:43:21,676 -                train: [    INFO] - Train: 13 [ 600/781 ( 77%)]  Loss: 4.308 (3.90)  Loss_gt: 3.187 (2.90)  Loss_kd: 1.121 (1.00) LR: 5.000e-02
+2025-09-15 18:43:38,372 -                train: [    INFO] - Train: 13 [ 780/781 (100%)]  Loss: 3.629 (3.90)  Loss_gt: 2.709 (2.90)  Loss_kd: 0.9207 (1.00) LR: 5.000e-02
+2025-09-15 18:43:38,488 -                train: [    INFO] - Test: [   0/156]  Time: 0.111 (0.111)  Loss:  1.9784 (1.9784)  Acc@1: 51.5625 (51.5625)  Acc@5: 76.5625 (76.5625)
+2025-09-15 18:43:41,354 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  1.7797 (2.0697)  Acc@1: 43.7500 (44.7000)  Acc@5: 81.2500 (76.8800)
+2025-09-15 18:43:41,937 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-12.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-4.pth.tar', 31.12)
+
+2025-09-15 18:43:42,160 -                train: [    INFO] - Train: 14 [   0/781 (  0%)]  Loss: 3.472 (3.47)  Loss_gt: 2.513 (2.51)  Loss_kd: 0.9587 (0.959) LR: 5.000e-02
+2025-09-15 18:44:00,699 -                train: [    INFO] - Train: 14 [ 200/781 ( 26%)]  Loss: 3.960 (3.87)  Loss_gt: 2.943 (2.88)  Loss_kd: 1.017 (0.993) LR: 5.000e-02
+2025-09-15 18:44:19,312 -                train: [    INFO] - Train: 14 [ 400/781 ( 51%)]  Loss: 3.985 (3.87)  Loss_gt: 2.979 (2.88)  Loss_kd: 1.006 (0.992) LR: 5.000e-02
+2025-09-15 18:44:37,900 -                train: [    INFO] - Train: 14 [ 600/781 ( 77%)]  Loss: 4.080 (3.88)  Loss_gt: 3.058 (2.88)  Loss_kd: 1.022 (0.997) LR: 5.000e-02
+2025-09-15 18:44:54,693 -                train: [    INFO] - Train: 14 [ 780/781 (100%)]  Loss: 4.075 (3.87)  Loss_gt: 3.092 (2.88)  Loss_kd: 0.9833 (0.993) LR: 5.000e-02
+2025-09-15 18:44:54,794 -                train: [    INFO] - Test: [   0/156]  Time: 0.096 (0.096)  Loss:  1.9013 (1.9013)  Acc@1: 57.8125 (57.8125)  Acc@5: 79.6875 (79.6875)
+2025-09-15 18:44:57,700 -                train: [    INFO] - Test: [ 156/156]  Time: 0.009 (0.019)  Loss:  2.1778 (2.0171)  Acc@1: 43.7500 (46.4100)  Acc@5: 81.2500 (78.3700)
+2025-09-15 18:44:58,012 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-12.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-6.pth.tar', 35.29)
+
+2025-09-15 18:44:58,202 -                train: [    INFO] - Train: 15 [   0/781 (  0%)]  Loss: 3.608 (3.61)  Loss_gt: 2.828 (2.83)  Loss_kd: 0.7797 (0.780) LR: 5.000e-02
+2025-09-15 18:45:16,720 -                train: [    INFO] - Train: 15 [ 200/781 ( 26%)]  Loss: 3.816 (3.82)  Loss_gt: 2.883 (2.86)  Loss_kd: 0.9334 (0.965) LR: 5.000e-02
+2025-09-15 18:45:35,272 -                train: [    INFO] - Train: 15 [ 400/781 ( 51%)]  Loss: 3.727 (3.83)  Loss_gt: 2.794 (2.86)  Loss_kd: 0.9337 (0.972) LR: 5.000e-02
+2025-09-15 18:45:53,831 -                train: [    INFO] - Train: 15 [ 600/781 ( 77%)]  Loss: 4.342 (3.83)  Loss_gt: 3.301 (2.86)  Loss_kd: 1.041 (0.974) LR: 5.000e-02
+2025-09-15 18:46:10,573 -                train: [    INFO] - Train: 15 [ 780/781 (100%)]  Loss: 3.852 (3.84)  Loss_gt: 2.777 (2.86)  Loss_kd: 1.075 (0.981) LR: 5.000e-02
+2025-09-15 18:46:10,677 -                train: [    INFO] - Test: [   0/156]  Time: 0.099 (0.099)  Loss:  1.8205 (1.8205)  Acc@1: 56.2500 (56.2500)  Acc@5: 78.1250 (78.1250)
+2025-09-15 18:46:13,660 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.020)  Loss:  2.0318 (1.9349)  Acc@1: 50.0000 (48.8900)  Acc@5: 75.0000 (80.3600)
+2025-09-15 18:46:13,946 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-12.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-5.pth.tar', 35.57)
+
+2025-09-15 18:46:14,140 -                train: [    INFO] - Train: 16 [   0/781 (  0%)]  Loss: 3.876 (3.88)  Loss_gt: 2.955 (2.95)  Loss_kd: 0.9216 (0.922) LR: 5.000e-02
+2025-09-15 18:46:32,750 -                train: [    INFO] - Train: 16 [ 200/781 ( 26%)]  Loss: 3.832 (3.80)  Loss_gt: 2.831 (2.83)  Loss_kd: 1.002 (0.972) LR: 5.000e-02
+2025-09-15 18:46:51,282 -                train: [    INFO] - Train: 16 [ 400/781 ( 51%)]  Loss: 3.883 (3.82)  Loss_gt: 2.869 (2.84)  Loss_kd: 1.014 (0.975) LR: 5.000e-02
+2025-09-15 18:47:09,782 -                train: [    INFO] - Train: 16 [ 600/781 ( 77%)]  Loss: 3.697 (3.83)  Loss_gt: 2.837 (2.85)  Loss_kd: 0.8599 (0.977) LR: 5.000e-02
+2025-09-15 18:47:26,564 -                train: [    INFO] - Train: 16 [ 780/781 (100%)]  Loss: 3.664 (3.83)  Loss_gt: 2.700 (2.85)  Loss_kd: 0.9642 (0.978) LR: 5.000e-02
+2025-09-15 18:47:26,668 -                train: [    INFO] - Test: [   0/156]  Time: 0.099 (0.099)  Loss:  1.8016 (1.8016)  Acc@1: 51.5625 (51.5625)  Acc@5: 78.1250 (78.1250)
+2025-09-15 18:47:29,612 -                train: [    INFO] - Test: [ 156/156]  Time: 0.009 (0.019)  Loss:  2.2740 (2.0175)  Acc@1: 43.7500 (46.5700)  Acc@5: 62.5000 (77.5000)
+2025-09-15 18:47:29,918 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-16.pth.tar', 46.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-12.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-7.pth.tar', 40.66)
+
+2025-09-15 18:47:30,125 -                train: [    INFO] - Train: 17 [   0/781 (  0%)]  Loss: 3.963 (3.96)  Loss_gt: 2.941 (2.94)  Loss_kd: 1.022 (1.02) LR: 5.000e-02
+2025-09-15 18:47:48,536 -                train: [    INFO] - Train: 17 [ 200/781 ( 26%)]  Loss: 4.092 (3.82)  Loss_gt: 2.972 (2.85)  Loss_kd: 1.120 (0.975) LR: 5.000e-02
+2025-09-15 18:48:07,020 -                train: [    INFO] - Train: 17 [ 400/781 ( 51%)]  Loss: 3.934 (3.83)  Loss_gt: 2.851 (2.85)  Loss_kd: 1.083 (0.973) LR: 5.000e-02
+2025-09-15 18:48:25,525 -                train: [    INFO] - Train: 17 [ 600/781 ( 77%)]  Loss: 4.087 (3.82)  Loss_gt: 3.058 (2.85)  Loss_kd: 1.029 (0.970) LR: 5.000e-02
+2025-09-15 18:48:42,220 -                train: [    INFO] - Train: 17 [ 780/781 (100%)]  Loss: 3.685 (3.82)  Loss_gt: 2.827 (2.85)  Loss_kd: 0.8580 (0.970) LR: 5.000e-02
+2025-09-15 18:48:42,322 -                train: [    INFO] - Test: [   0/156]  Time: 0.097 (0.097)  Loss:  1.7533 (1.7533)  Acc@1: 62.5000 (62.5000)  Acc@5: 87.5000 (87.5000)
+2025-09-15 18:48:45,057 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.018)  Loss:  2.1535 (2.0710)  Acc@1: 56.2500 (46.5200)  Acc@5: 68.7500 (76.8200)
+2025-09-15 18:48:45,327 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-16.pth.tar', 46.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-17.pth.tar', 46.52)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-12.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-9.pth.tar', 43.77)
+
+2025-09-15 18:48:45,511 -                train: [    INFO] - Train: 18 [   0/781 (  0%)]  Loss: 3.550 (3.55)  Loss_gt: 2.650 (2.65)  Loss_kd: 0.8993 (0.899) LR: 5.000e-02
+2025-09-15 18:49:04,066 -                train: [    INFO] - Train: 18 [ 200/781 ( 26%)]  Loss: 3.868 (3.79)  Loss_gt: 2.876 (2.83)  Loss_kd: 0.9924 (0.966) LR: 5.000e-02
+2025-09-15 18:49:22,628 -                train: [    INFO] - Train: 18 [ 400/781 ( 51%)]  Loss: 3.797 (3.80)  Loss_gt: 2.877 (2.83)  Loss_kd: 0.9201 (0.970) LR: 5.000e-02
+2025-09-15 18:49:41,215 -                train: [    INFO] - Train: 18 [ 600/781 ( 77%)]  Loss: 4.037 (3.81)  Loss_gt: 3.033 (2.84)  Loss_kd: 1.004 (0.970) LR: 5.000e-02
+2025-09-15 18:49:57,956 -                train: [    INFO] - Train: 18 [ 780/781 (100%)]  Loss: 4.138 (3.81)  Loss_gt: 2.977 (2.84)  Loss_kd: 1.161 (0.974) LR: 5.000e-02
+2025-09-15 18:49:58,060 -                train: [    INFO] - Test: [   0/156]  Time: 0.098 (0.098)  Loss:  2.0216 (2.0216)  Acc@1: 48.4375 (48.4375)  Acc@5: 76.5625 (76.5625)
+2025-09-15 18:50:00,954 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.5228 (2.0402)  Acc@1: 37.5000 (45.8800)  Acc@5: 75.0000 (78.1600)
+2025-09-15 18:50:01,323 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-16.pth.tar', 46.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-17.pth.tar', 46.52)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-18.pth.tar', 45.88)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-12.pth.tar', 44.19)
+
+2025-09-15 18:50:01,556 -                train: [    INFO] - Train: 19 [   0/781 (  0%)]  Loss: 3.791 (3.79)  Loss_gt: 2.837 (2.84)  Loss_kd: 0.9536 (0.954) LR: 5.000e-02
+2025-09-15 18:50:20,163 -                train: [    INFO] - Train: 19 [ 200/781 ( 26%)]  Loss: 4.011 (3.76)  Loss_gt: 2.930 (2.81)  Loss_kd: 1.081 (0.954) LR: 5.000e-02
+2025-09-15 18:50:38,820 -                train: [    INFO] - Train: 19 [ 400/781 ( 51%)]  Loss: 3.478 (3.78)  Loss_gt: 2.591 (2.82)  Loss_kd: 0.8866 (0.963) LR: 5.000e-02
+2025-09-15 18:50:57,390 -                train: [    INFO] - Train: 19 [ 600/781 ( 77%)]  Loss: 3.188 (3.78)  Loss_gt: 2.490 (2.82)  Loss_kd: 0.6981 (0.958) LR: 5.000e-02
+2025-09-15 18:51:14,011 -                train: [    INFO] - Train: 19 [ 780/781 (100%)]  Loss: 3.680 (3.78)  Loss_gt: 2.788 (2.83)  Loss_kd: 0.8913 (0.959) LR: 5.000e-02
+2025-09-15 18:51:14,131 -                train: [    INFO] - Test: [   0/156]  Time: 0.115 (0.115)  Loss:  1.8771 (1.8771)  Acc@1: 67.1875 (67.1875)  Acc@5: 81.2500 (81.2500)
+2025-09-15 18:51:17,008 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  1.8788 (1.9487)  Acc@1: 56.2500 (48.5900)  Acc@5: 81.2500 (80.5000)
+2025-09-15 18:51:17,501 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-19.pth.tar', 48.59)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-16.pth.tar', 46.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-17.pth.tar', 46.52)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-18.pth.tar', 45.88)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-8.pth.tar', 44.19)
+
+2025-09-15 18:51:17,704 -                train: [    INFO] - Train: 20 [   0/781 (  0%)]  Loss: 4.017 (4.02)  Loss_gt: 2.971 (2.97)  Loss_kd: 1.046 (1.05) LR: 5.000e-02
+2025-09-15 18:51:36,249 -                train: [    INFO] - Train: 20 [ 200/781 ( 26%)]  Loss: 4.019 (3.75)  Loss_gt: 3.095 (2.80)  Loss_kd: 0.9236 (0.951) LR: 5.000e-02
+2025-09-15 18:51:54,796 -                train: [    INFO] - Train: 20 [ 400/781 ( 51%)]  Loss: 3.915 (3.76)  Loss_gt: 2.889 (2.81)  Loss_kd: 1.026 (0.952) LR: 5.000e-02
+2025-09-15 18:52:13,324 -                train: [    INFO] - Train: 20 [ 600/781 ( 77%)]  Loss: 3.603 (3.78)  Loss_gt: 2.768 (2.82)  Loss_kd: 0.8352 (0.959) LR: 5.000e-02
+2025-09-15 18:52:29,984 -                train: [    INFO] - Train: 20 [ 780/781 (100%)]  Loss: 3.992 (3.78)  Loss_gt: 3.089 (2.82)  Loss_kd: 0.9027 (0.960) LR: 5.000e-02
+2025-09-15 18:52:30,091 -                train: [    INFO] - Test: [   0/156]  Time: 0.101 (0.101)  Loss:  1.8189 (1.8189)  Acc@1: 48.4375 (48.4375)  Acc@5: 81.2500 (81.2500)
+2025-09-15 18:52:32,910 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.1489 (2.0208)  Acc@1: 50.0000 (46.9100)  Acc@5: 62.5000 (78.3300)
+2025-09-15 18:52:33,160 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-19.pth.tar', 48.59)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-20.pth.tar', 46.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-16.pth.tar', 46.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-17.pth.tar', 46.52)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-18.pth.tar', 45.88)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-13.pth.tar', 44.7)
+
+2025-09-15 18:52:33,348 -                train: [    INFO] - Train: 21 [   0/781 (  0%)]  Loss: 3.670 (3.67)  Loss_gt: 2.781 (2.78)  Loss_kd: 0.8892 (0.889) LR: 5.000e-02
+2025-09-15 18:52:51,886 -                train: [    INFO] - Train: 21 [ 200/781 ( 26%)]  Loss: 3.900 (3.73)  Loss_gt: 2.907 (2.79)  Loss_kd: 0.9931 (0.939) LR: 5.000e-02
+2025-09-15 18:53:10,455 -                train: [    INFO] - Train: 21 [ 400/781 ( 51%)]  Loss: 3.992 (3.76)  Loss_gt: 3.072 (2.81)  Loss_kd: 0.9196 (0.949) LR: 5.000e-02
+2025-09-15 18:53:28,875 -                train: [    INFO] - Train: 21 [ 600/781 ( 77%)]  Loss: 3.841 (3.78)  Loss_gt: 2.970 (2.83)  Loss_kd: 0.8715 (0.959) LR: 5.000e-02
+2025-09-15 18:53:45,516 -                train: [    INFO] - Train: 21 [ 780/781 (100%)]  Loss: 3.471 (3.78)  Loss_gt: 2.557 (2.82)  Loss_kd: 0.9146 (0.958) LR: 5.000e-02
+2025-09-15 18:53:45,633 -                train: [    INFO] - Test: [   0/156]  Time: 0.111 (0.111)  Loss:  1.8768 (1.8768)  Acc@1: 51.5625 (51.5625)  Acc@5: 75.0000 (75.0000)
+2025-09-15 18:53:48,541 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.0586 (1.9389)  Acc@1: 43.7500 (48.4100)  Acc@5: 81.2500 (80.6000)
+2025-09-15 18:53:48,901 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-19.pth.tar', 48.59)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-21.pth.tar', 48.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-20.pth.tar', 46.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-16.pth.tar', 46.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-17.pth.tar', 46.52)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-18.pth.tar', 45.88)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-11.pth.tar', 44.91)
+
+2025-09-15 18:53:49,086 -                train: [    INFO] - Train: 22 [   0/781 (  0%)]  Loss: 3.716 (3.72)  Loss_gt: 2.737 (2.74)  Loss_kd: 0.9794 (0.979) LR: 5.000e-02
+2025-09-15 18:54:07,672 -                train: [    INFO] - Train: 22 [ 200/781 ( 26%)]  Loss: 3.951 (3.74)  Loss_gt: 3.024 (2.81)  Loss_kd: 0.9273 (0.938) LR: 5.000e-02
+2025-09-15 18:54:26,212 -                train: [    INFO] - Train: 22 [ 400/781 ( 51%)]  Loss: 3.743 (3.75)  Loss_gt: 2.772 (2.80)  Loss_kd: 0.9711 (0.947) LR: 5.000e-02
+2025-09-15 18:54:44,703 -                train: [    INFO] - Train: 22 [ 600/781 ( 77%)]  Loss: 3.984 (3.76)  Loss_gt: 2.876 (2.81)  Loss_kd: 1.108 (0.950) LR: 5.000e-02
+2025-09-15 18:55:01,457 -                train: [    INFO] - Train: 22 [ 780/781 (100%)]  Loss: 3.757 (3.76)  Loss_gt: 2.850 (2.81)  Loss_kd: 0.9072 (0.949) LR: 5.000e-02
+2025-09-15 18:55:01,574 -                train: [    INFO] - Test: [   0/156]  Time: 0.111 (0.111)  Loss:  1.7990 (1.7990)  Acc@1: 54.6875 (54.6875)  Acc@5: 78.1250 (78.1250)
+2025-09-15 18:55:04,460 -                train: [    INFO] - Test: [ 156/156]  Time: 0.008 (0.019)  Loss:  2.2355 (1.9134)  Acc@1: 50.0000 (48.5000)  Acc@5: 68.7500 (80.2400)
+2025-09-15 18:55:04,693 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-15.pth.tar', 48.89)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-19.pth.tar', 48.59)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-22.pth.tar', 48.5)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-21.pth.tar', 48.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-20.pth.tar', 46.91)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-16.pth.tar', 46.57)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-17.pth.tar', 46.52)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-14.pth.tar', 46.41)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-18.pth.tar', 45.88)
+ ('./output/train/20250915-182558-resnet18-224/checkpoint/checkpoint-10.pth.tar', 45.09)
+
+2025-09-15 18:55:04,893 -                train: [    INFO] - Train: 23 [   0/781 (  0%)]  Loss: 3.649 (3.65)  Loss_gt: 2.729 (2.73)  Loss_kd: 0.9200 (0.920) LR: 5.000e-02
+2025-09-15 18:55:15,577 -                train: [    INFO] - *** Best metric: 48.89 (epoch 15)

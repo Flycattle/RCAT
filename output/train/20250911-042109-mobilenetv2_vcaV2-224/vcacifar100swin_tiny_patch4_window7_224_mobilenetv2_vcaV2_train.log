@@ -1,0 +1,359 @@
+2025-09-11 04:16:22,232 -                train: [    INFO] - Training with a single process on 1 GPUs.
+2025-09-11 04:16:26,450 -  timm.models.helpers: [    INFO] - Loaded  from checkpoint '/nfs4/wangyb/projects/OFAKD/teacher_checkpoint/swin_tiny_patch4_window7_224_cifar100.pth'
+2025-09-11 04:16:26,850 -                train: [    INFO] - Model mobilenetv2_vcaV2 created, param count:4592484
+2025-09-11 04:16:26,850 -     timm.data.config: [    INFO] - Data processing configuration for current model + dataset:
+2025-09-11 04:16:26,850 -     timm.data.config: [    INFO] - 	input_size: (3, 224, 224)
+2025-09-11 04:16:26,850 -     timm.data.config: [    INFO] - 	interpolation: bicubic
+2025-09-11 04:16:26,850 -     timm.data.config: [    INFO] - 	mean: (0.485, 0.456, 0.406)
+2025-09-11 04:16:26,852 -     timm.data.config: [    INFO] - 	std: (0.229, 0.224, 0.225)
+2025-09-11 04:16:26,852 -     timm.data.config: [    INFO] - 	crop_pct: 0.875
+2025-09-11 04:20:53,253 -                train: [    INFO] - Training with a single process on 1 GPUs.
+2025-09-11 04:20:55,336 -  timm.models.helpers: [    INFO] - Loaded  from checkpoint '/nfs4/wangyb/projects/OFAKD/teacher_checkpoint/swin_tiny_patch4_window7_224_cifar100.pth'
+2025-09-11 04:20:55,779 -                train: [    INFO] - Model mobilenetv2_vcaV2 created, param count:4592484
+2025-09-11 04:20:55,779 -     timm.data.config: [    INFO] - Data processing configuration for current model + dataset:
+2025-09-11 04:20:55,781 -     timm.data.config: [    INFO] - 	input_size: (3, 224, 224)
+2025-09-11 04:20:55,781 -     timm.data.config: [    INFO] - 	interpolation: bicubic
+2025-09-11 04:20:55,782 -     timm.data.config: [    INFO] - 	mean: (0.485, 0.456, 0.406)
+2025-09-11 04:20:55,782 -     timm.data.config: [    INFO] - 	std: (0.229, 0.224, 0.225)
+2025-09-11 04:20:55,782 -     timm.data.config: [    INFO] - 	crop_pct: 0.875
+2025-09-11 04:21:09,186 -                train: [    INFO] - 
+-------------------------------
+Learnable parameters
+Student: 4.59M
+Extra: 0.00M
+-------------------------------
+2025-09-11 04:21:09,329 -                train: [    INFO] - AMP not enabled. Training in float32.
+2025-09-11 04:21:09,330 -                train: [    INFO] - Scheduled epochs: 240
+2025-09-11 04:21:13,089 -                train: [    INFO] - Train: 0 [   0/195 (  0%)]  Loss: 99.30 (99.3)  Loss_cat: 42.19 (42.2)  Loss_feat: 50.11 (50.1)  Loss_gt: 4.616 (4.62)  Loss_kd: 2.378 (2.38) LR: 1.000e-04
+2025-09-11 04:22:37,788 -                train: [    INFO] - Train: 0 [ 194/195 (100%)]  Loss: 82.63 (85.5)  Loss_cat: 27.86 (29.5)  Loss_feat: 48.09 (49.2)  Loss_gt: 4.573 (4.60)  Loss_kd: 2.113 (2.27) LR: 1.000e-04
+2025-09-11 04:22:38,509 -                train: [    INFO] - Test: [   0/39]  Time: 0.697 (0.697)  Loss:  4.4941 (4.4941)  Acc@1:  2.7344 ( 2.7344)  Acc@5: 12.1094 (12.1094)
+2025-09-11 04:22:41,830 -                train: [    INFO] - Test: [  39/39]  Time: 0.119 (0.100)  Loss:  4.4760 (4.5373)  Acc@1:  0.0000 ( 2.1600)  Acc@5: 18.7500 (10.2700)
+2025-09-11 04:22:41,957 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:22:42,904 -                train: [    INFO] - Train: 1 [   0/195 (  0%)]  Loss: 82.54 (82.5)  Loss_cat: 27.81 (27.8)  Loss_feat: 48.03 (48.0)  Loss_gt: 4.590 (4.59)  Loss_kd: 2.111 (2.11) LR: 1.673e-02
+2025-09-11 04:24:07,442 -                train: [    INFO] - Train: 1 [ 194/195 (100%)]  Loss: 59.47 (66.0)  Loss_cat: 17.61 (21.3)  Loss_feat: 36.56 (38.9)  Loss_gt: 3.925 (4.12)  Loss_kd: 1.374 (1.74) LR: 1.673e-02
+2025-09-11 04:24:07,892 -                train: [    INFO] - Test: [   0/39]  Time: 0.429 (0.429)  Loss:  3.4777 (3.4777)  Acc@1: 17.5781 (17.5781)  Acc@5: 41.4062 (41.4062)
+2025-09-11 04:24:10,969 -                train: [    INFO] - Test: [  39/39]  Time: 0.023 (0.088)  Loss:  3.3573 (3.5533)  Acc@1: 18.7500 (15.8700)  Acc@5: 50.0000 (42.8000)
+2025-09-11 04:24:11,086 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:24:11,891 -                train: [    INFO] - Train: 2 [   0/195 (  0%)]  Loss: 59.63 (59.6)  Loss_cat: 17.92 (17.9)  Loss_feat: 36.41 (36.4)  Loss_gt: 3.818 (3.82)  Loss_kd: 1.479 (1.48) LR: 3.337e-02
+2025-09-11 04:25:36,145 -                train: [    INFO] - Train: 2 [ 194/195 (100%)]  Loss: 52.34 (56.9)  Loss_cat: 13.88 (16.3)  Loss_feat: 34.15 (35.6)  Loss_gt: 3.260 (3.64)  Loss_kd: 1.051 (1.30) LR: 3.337e-02
+2025-09-11 04:25:36,591 -                train: [    INFO] - Test: [   0/39]  Time: 0.427 (0.427)  Loss:  2.5630 (2.5630)  Acc@1: 32.8125 (32.8125)  Acc@5: 68.3594 (68.3594)
+2025-09-11 04:25:39,776 -                train: [    INFO] - Test: [  39/39]  Time: 0.030 (0.090)  Loss:  2.6607 (2.6371)  Acc@1: 31.2500 (31.8800)  Acc@5: 75.0000 (66.7200)
+2025-09-11 04:25:40,018 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:25:40,853 -                train: [    INFO] - Train: 3 [   0/195 (  0%)]  Loss: 52.46 (52.5)  Loss_cat: 13.83 (13.8)  Loss_feat: 34.10 (34.1)  Loss_gt: 3.403 (3.40)  Loss_kd: 1.115 (1.11) LR: 5.000e-02
+2025-09-11 04:27:05,293 -                train: [    INFO] - Train: 3 [ 194/195 (100%)]  Loss: 49.15 (51.1)  Loss_cat: 12.15 (13.2)  Loss_feat: 32.88 (33.6)  Loss_gt: 3.171 (3.29)  Loss_kd: 0.9531 (1.03) LR: 5.000e-02
+2025-09-11 04:27:05,730 -                train: [    INFO] - Test: [   0/39]  Time: 0.417 (0.417)  Loss:  2.1797 (2.1797)  Acc@1: 46.4844 (46.4844)  Acc@5: 74.6094 (74.6094)
+2025-09-11 04:27:08,874 -                train: [    INFO] - Test: [  39/39]  Time: 0.025 (0.089)  Loss:  2.5606 (2.2645)  Acc@1: 43.7500 (40.4200)  Acc@5: 56.2500 (74.2700)
+2025-09-11 04:27:09,004 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:27:09,786 -                train: [    INFO] - Train: 4 [   0/195 (  0%)]  Loss: 46.96 (47.0)  Loss_cat: 10.94 (10.9)  Loss_feat: 32.15 (32.1)  Loss_gt: 3.049 (3.05)  Loss_kd: 0.8244 (0.824) LR: 5.000e-02
+2025-09-11 04:28:34,083 -                train: [    INFO] - Train: 4 [ 194/195 (100%)]  Loss: 46.05 (47.2)  Loss_cat: 10.54 (11.2)  Loss_feat: 31.65 (32.2)  Loss_gt: 3.058 (3.05)  Loss_kd: 0.8061 (0.845) LR: 5.000e-02
+2025-09-11 04:28:34,517 -                train: [    INFO] - Test: [   0/39]  Time: 0.420 (0.420)  Loss:  2.0023 (2.0023)  Acc@1: 48.8281 (48.8281)  Acc@5: 82.8125 (82.8125)
+2025-09-11 04:28:37,709 -                train: [    INFO] - Test: [  39/39]  Time: 0.026 (0.090)  Loss:  2.2045 (2.1843)  Acc@1: 37.5000 (43.2200)  Acc@5: 75.0000 (77.2300)
+2025-09-11 04:28:38,109 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:28:38,944 -                train: [    INFO] - Train: 5 [   0/195 (  0%)]  Loss: 46.21 (46.2)  Loss_cat: 10.73 (10.7)  Loss_feat: 31.48 (31.5)  Loss_gt: 3.146 (3.15)  Loss_kd: 0.8524 (0.852) LR: 5.000e-02
+2025-09-11 04:30:03,474 -                train: [    INFO] - Train: 5 [ 194/195 (100%)]  Loss: 44.15 (45.1)  Loss_cat: 9.672 (10.2)  Loss_feat: 30.86 (31.3)  Loss_gt: 2.902 (2.92)  Loss_kd: 0.7166 (0.752) LR: 5.000e-02
+2025-09-11 04:30:03,913 -                train: [    INFO] - Test: [   0/39]  Time: 0.417 (0.417)  Loss:  1.8500 (1.8500)  Acc@1: 53.9062 (53.9062)  Acc@5: 81.6406 (81.6406)
+2025-09-11 04:30:06,871 -                train: [    INFO] - Test: [  39/39]  Time: 0.022 (0.084)  Loss:  1.7730 (1.9471)  Acc@1: 56.2500 (48.6700)  Acc@5: 68.7500 (80.9400)
+2025-09-11 04:30:07,245 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:30:08,179 -                train: [    INFO] - Train: 6 [   0/195 (  0%)]  Loss: 43.99 (44.0)  Loss_cat: 9.512 (9.51)  Loss_feat: 31.05 (31.0)  Loss_gt: 2.703 (2.70)  Loss_kd: 0.7305 (0.731) LR: 5.000e-02
+2025-09-11 04:31:32,044 -                train: [    INFO] - Train: 6 [ 194/195 (100%)]  Loss: 43.21 (43.9)  Loss_cat: 9.157 (9.55)  Loss_feat: 30.51 (30.8)  Loss_gt: 2.916 (2.83)  Loss_kd: 0.6261 (0.695) LR: 5.000e-02
+2025-09-11 04:31:32,481 -                train: [    INFO] - Test: [   0/39]  Time: 0.419 (0.419)  Loss:  1.7596 (1.7596)  Acc@1: 54.6875 (54.6875)  Acc@5: 84.3750 (84.3750)
+2025-09-11 04:31:35,521 -                train: [    INFO] - Test: [  39/39]  Time: 0.025 (0.086)  Loss:  2.0439 (1.8588)  Acc@1: 50.0000 (52.0600)  Acc@5: 75.0000 (83.1900)
+2025-09-11 04:31:35,688 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:31:36,462 -                train: [    INFO] - Train: 7 [   0/195 (  0%)]  Loss: 44.08 (44.1)  Loss_cat: 9.662 (9.66)  Loss_feat: 30.88 (30.9)  Loss_gt: 2.846 (2.85)  Loss_kd: 0.6944 (0.694) LR: 5.000e-02
+2025-09-11 04:33:01,287 -                train: [    INFO] - Train: 7 [ 194/195 (100%)]  Loss: 42.75 (43.0)  Loss_cat: 8.913 (9.13)  Loss_feat: 30.36 (30.5)  Loss_gt: 2.820 (2.77)  Loss_kd: 0.6537 (0.653) LR: 5.000e-02
+2025-09-11 04:33:01,704 -                train: [    INFO] - Test: [   0/39]  Time: 0.399 (0.399)  Loss:  1.6407 (1.6407)  Acc@1: 58.5938 (58.5938)  Acc@5: 86.3281 (86.3281)
+2025-09-11 04:33:04,929 -                train: [    INFO] - Test: [  39/39]  Time: 0.023 (0.091)  Loss:  1.8270 (1.7200)  Acc@1: 50.0000 (54.2700)  Acc@5: 81.2500 (84.7500)
+2025-09-11 04:33:05,084 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:33:05,908 -                train: [    INFO] - Train: 8 [   0/195 (  0%)]  Loss: 42.19 (42.2)  Loss_cat: 8.669 (8.67)  Loss_feat: 30.11 (30.1)  Loss_gt: 2.804 (2.80)  Loss_kd: 0.6047 (0.605) LR: 5.000e-02
+2025-09-11 04:34:30,025 -                train: [    INFO] - Train: 8 [ 194/195 (100%)]  Loss: 42.00 (42.4)  Loss_cat: 8.708 (8.87)  Loss_feat: 30.18 (30.2)  Loss_gt: 2.512 (2.74)  Loss_kd: 0.5984 (0.628) LR: 5.000e-02
+2025-09-11 04:34:30,443 -                train: [    INFO] - Test: [   0/39]  Time: 0.400 (0.400)  Loss:  1.7732 (1.7732)  Acc@1: 55.8594 (55.8594)  Acc@5: 82.8125 (82.8125)
+2025-09-11 04:34:33,585 -                train: [    INFO] - Test: [  39/39]  Time: 0.024 (0.089)  Loss:  1.9814 (1.8282)  Acc@1: 50.0000 (52.5100)  Acc@5: 93.7500 (84.0800)
+2025-09-11 04:34:33,756 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:34:34,576 -                train: [    INFO] - Train: 9 [   0/195 (  0%)]  Loss: 42.43 (42.4)  Loss_cat: 8.903 (8.90)  Loss_feat: 30.31 (30.3)  Loss_gt: 2.632 (2.63)  Loss_kd: 0.5920 (0.592) LR: 5.000e-02
+2025-09-11 04:35:59,336 -                train: [    INFO] - Train: 9 [ 194/195 (100%)]  Loss: 42.07 (42.0)  Loss_cat: 8.702 (8.68)  Loss_feat: 30.03 (30.0)  Loss_gt: 2.721 (2.70)  Loss_kd: 0.6245 (0.609) LR: 5.000e-02
+2025-09-11 04:35:59,766 -                train: [    INFO] - Test: [   0/39]  Time: 0.410 (0.410)  Loss:  1.5114 (1.5114)  Acc@1: 66.7969 (66.7969)  Acc@5: 85.9375 (85.9375)
+2025-09-11 04:36:02,725 -                train: [    INFO] - Test: [  39/39]  Time: 0.023 (0.084)  Loss:  1.7564 (1.6182)  Acc@1: 56.2500 (57.4500)  Acc@5: 75.0000 (87.1300)
+2025-09-11 04:36:02,851 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-0.pth.tar', 2.16)
+
+2025-09-11 04:36:03,666 -                train: [    INFO] - Train: 10 [   0/195 (  0%)]  Loss: 41.66 (41.7)  Loss_cat: 8.473 (8.47)  Loss_feat: 29.98 (30.0)  Loss_gt: 2.614 (2.61)  Loss_kd: 0.5999 (0.600) LR: 5.000e-02
+2025-09-11 04:37:27,828 -                train: [    INFO] - Train: 10 [ 194/195 (100%)]  Loss: 42.23 (41.5)  Loss_cat: 8.773 (8.45)  Loss_feat: 30.08 (29.8)  Loss_gt: 2.770 (2.67)  Loss_kd: 0.6051 (0.589) LR: 5.000e-02
+2025-09-11 04:37:28,278 -                train: [    INFO] - Test: [   0/39]  Time: 0.434 (0.434)  Loss:  1.5194 (1.5194)  Acc@1: 58.2031 (58.2031)  Acc@5: 86.3281 (86.3281)
+2025-09-11 04:37:31,451 -                train: [    INFO] - Test: [  39/39]  Time: 0.026 (0.090)  Loss:  1.4009 (1.6539)  Acc@1: 68.7500 (57.0300)  Acc@5: 87.5000 (86.3400)
+2025-09-11 04:37:36,071 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-1.pth.tar', 15.87)
+
+2025-09-11 04:37:36,914 -                train: [    INFO] - Train: 11 [   0/195 (  0%)]  Loss: 40.37 (40.4)  Loss_cat: 7.978 (7.98)  Loss_feat: 29.23 (29.2)  Loss_gt: 2.601 (2.60)  Loss_kd: 0.5584 (0.558) LR: 5.000e-02
+2025-09-11 04:39:01,420 -                train: [    INFO] - Train: 11 [ 194/195 (100%)]  Loss: 41.11 (41.2)  Loss_cat: 8.373 (8.30)  Loss_feat: 29.51 (29.6)  Loss_gt: 2.653 (2.64)  Loss_kd: 0.5808 (0.574) LR: 5.000e-02
+2025-09-11 04:39:01,852 -                train: [    INFO] - Test: [   0/39]  Time: 0.412 (0.412)  Loss:  1.5733 (1.5733)  Acc@1: 60.1562 (60.1562)  Acc@5: 84.3750 (84.3750)
+2025-09-11 04:39:04,930 -                train: [    INFO] - Test: [  39/39]  Time: 0.028 (0.087)  Loss:  1.5777 (1.6712)  Acc@1: 62.5000 (55.6400)  Acc@5: 81.2500 (85.5000)
+2025-09-11 04:39:05,083 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-2.pth.tar', 31.88)
+
+2025-09-11 04:39:05,911 -                train: [    INFO] - Train: 12 [   0/195 (  0%)]  Loss: 41.23 (41.2)  Loss_cat: 8.308 (8.31)  Loss_feat: 29.71 (29.7)  Loss_gt: 2.657 (2.66)  Loss_kd: 0.5558 (0.556) LR: 5.000e-02
+2025-09-11 04:40:30,344 -                train: [    INFO] - Train: 12 [ 194/195 (100%)]  Loss: 41.55 (40.9)  Loss_cat: 8.572 (8.19)  Loss_feat: 29.66 (29.5)  Loss_gt: 2.703 (2.64)  Loss_kd: 0.6141 (0.567) LR: 5.000e-02
+2025-09-11 04:40:30,782 -                train: [    INFO] - Test: [   0/39]  Time: 0.418 (0.418)  Loss:  1.3340 (1.3340)  Acc@1: 64.4531 (64.4531)  Acc@5: 88.2812 (88.2812)
+2025-09-11 04:40:33,832 -                train: [    INFO] - Test: [  39/39]  Time: 0.022 (0.087)  Loss:  1.4280 (1.5245)  Acc@1: 56.2500 (60.0500)  Acc@5: 87.5000 (88.0500)
+2025-09-11 04:40:33,940 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-3.pth.tar', 40.42)
+
+2025-09-11 04:40:34,709 -                train: [    INFO] - Train: 13 [   0/195 (  0%)]  Loss: 40.31 (40.3)  Loss_cat: 7.881 (7.88)  Loss_feat: 29.39 (29.4)  Loss_gt: 2.476 (2.48)  Loss_kd: 0.5610 (0.561) LR: 5.000e-02
+2025-09-11 04:41:58,769 -                train: [    INFO] - Train: 13 [ 194/195 (100%)]  Loss: 40.62 (40.7)  Loss_cat: 8.031 (8.11)  Loss_feat: 29.41 (29.4)  Loss_gt: 2.639 (2.62)  Loss_kd: 0.5354 (0.558) LR: 5.000e-02
+2025-09-11 04:41:59,317 -                train: [    INFO] - Test: [   0/39]  Time: 0.527 (0.527)  Loss:  1.4345 (1.4345)  Acc@1: 64.0625 (64.0625)  Acc@5: 87.5000 (87.5000)
+2025-09-11 04:42:02,366 -                train: [    INFO] - Test: [  39/39]  Time: 0.025 (0.089)  Loss:  1.5535 (1.5178)  Acc@1: 56.2500 (60.3000)  Acc@5: 87.5000 (88.5300)
+2025-09-11 04:42:05,369 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-4.pth.tar', 43.22)
+
+2025-09-11 04:42:06,265 -                train: [    INFO] - Train: 14 [   0/195 (  0%)]  Loss: 40.80 (40.8)  Loss_cat: 8.139 (8.14)  Loss_feat: 29.55 (29.6)  Loss_gt: 2.556 (2.56)  Loss_kd: 0.5480 (0.548) LR: 5.000e-02
+2025-09-11 04:43:29,901 -                train: [    INFO] - Train: 14 [ 194/195 (100%)]  Loss: 40.30 (40.5)  Loss_cat: 7.855 (7.99)  Loss_feat: 29.31 (29.3)  Loss_gt: 2.621 (2.59)  Loss_kd: 0.5189 (0.548) LR: 5.000e-02
+2025-09-11 04:43:30,305 -                train: [    INFO] - Test: [   0/39]  Time: 0.388 (0.388)  Loss:  1.4920 (1.4920)  Acc@1: 61.3281 (61.3281)  Acc@5: 88.6719 (88.6719)
+2025-09-11 04:43:33,042 -                train: [    INFO] - Test: [  39/39]  Time: 0.019 (0.078)  Loss:  1.6414 (1.5811)  Acc@1: 62.5000 (58.5600)  Acc@5: 81.2500 (87.6400)
+2025-09-11 04:43:35,224 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-5.pth.tar', 48.67)
+
+2025-09-11 04:43:36,101 -                train: [    INFO] - Train: 15 [   0/195 (  0%)]  Loss: 40.06 (40.1)  Loss_cat: 7.839 (7.84)  Loss_feat: 29.28 (29.3)  Loss_gt: 2.383 (2.38)  Loss_kd: 0.5526 (0.553) LR: 5.000e-02
+2025-09-11 04:44:59,533 -                train: [    INFO] - Train: 15 [ 194/195 (100%)]  Loss: 39.93 (40.4)  Loss_cat: 7.758 (7.96)  Loss_feat: 29.14 (29.3)  Loss_gt: 2.519 (2.59)  Loss_kd: 0.5131 (0.544) LR: 5.000e-02
+2025-09-11 04:44:59,980 -                train: [    INFO] - Test: [   0/39]  Time: 0.427 (0.427)  Loss:  1.5881 (1.5881)  Acc@1: 57.8125 (57.8125)  Acc@5: 84.7656 (84.7656)
+2025-09-11 04:45:02,998 -                train: [    INFO] - Test: [  39/39]  Time: 0.022 (0.086)  Loss:  1.9949 (1.7706)  Acc@1: 56.2500 (54.6500)  Acc@5: 75.0000 (83.7000)
+2025-09-11 04:45:03,484 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-15.pth.tar', 54.65)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-6.pth.tar', 52.06)
+
+2025-09-11 04:45:04,244 -                train: [    INFO] - Train: 16 [   0/195 (  0%)]  Loss: 40.36 (40.4)  Loss_cat: 7.920 (7.92)  Loss_feat: 29.24 (29.2)  Loss_gt: 2.668 (2.67)  Loss_kd: 0.5326 (0.533) LR: 5.000e-02
+2025-09-11 04:46:27,405 -                train: [    INFO] - Train: 16 [ 194/195 (100%)]  Loss: 39.12 (40.0)  Loss_cat: 7.480 (7.82)  Loss_feat: 28.76 (29.1)  Loss_gt: 2.392 (2.58)  Loss_kd: 0.4880 (0.531) LR: 5.000e-02
+2025-09-11 04:46:27,813 -                train: [    INFO] - Test: [   0/39]  Time: 0.391 (0.391)  Loss:  1.4191 (1.4191)  Acc@1: 64.8438 (64.8438)  Acc@5: 85.5469 (85.5469)
+2025-09-11 04:46:30,535 -                train: [    INFO] - Test: [  39/39]  Time: 0.019 (0.078)  Loss:  1.4480 (1.6090)  Acc@1: 68.7500 (58.6800)  Acc@5: 81.2500 (86.6100)
+2025-09-11 04:46:30,659 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-16.pth.tar', 58.68)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-15.pth.tar', 54.65)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-8.pth.tar', 52.51)
+
+2025-09-11 04:46:31,397 -                train: [    INFO] - Train: 17 [   0/195 (  0%)]  Loss: 39.60 (39.6)  Loss_cat: 7.558 (7.56)  Loss_feat: 29.03 (29.0)  Loss_gt: 2.518 (2.52)  Loss_kd: 0.4947 (0.495) LR: 5.000e-02
+2025-09-11 04:47:54,829 -                train: [    INFO] - Train: 17 [ 194/195 (100%)]  Loss: 39.95 (39.8)  Loss_cat: 7.709 (7.74)  Loss_feat: 29.07 (29.0)  Loss_gt: 2.680 (2.56)  Loss_kd: 0.4953 (0.522) LR: 5.000e-02
+2025-09-11 04:47:55,243 -                train: [    INFO] - Test: [   0/39]  Time: 0.396 (0.396)  Loss:  1.4122 (1.4122)  Acc@1: 66.0156 (66.0156)  Acc@5: 92.1875 (92.1875)
+2025-09-11 04:47:58,022 -                train: [    INFO] - Test: [  39/39]  Time: 0.021 (0.079)  Loss:  1.2361 (1.5652)  Acc@1: 56.2500 (58.7800)  Acc@5: 100.0000 (87.4400)
+2025-09-11 04:47:58,152 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-17.pth.tar', 58.78)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-16.pth.tar', 58.68)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-15.pth.tar', 54.65)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-7.pth.tar', 54.27)
+
+2025-09-11 04:47:58,893 -                train: [    INFO] - Train: 18 [   0/195 (  0%)]  Loss: 39.79 (39.8)  Loss_cat: 7.810 (7.81)  Loss_feat: 28.99 (29.0)  Loss_gt: 2.501 (2.50)  Loss_kd: 0.4898 (0.490) LR: 5.000e-02
+2025-09-11 04:49:21,843 -                train: [    INFO] - Train: 18 [ 194/195 (100%)]  Loss: 40.02 (39.7)  Loss_cat: 7.884 (7.70)  Loss_feat: 28.96 (29.0)  Loss_gt: 2.584 (2.56)  Loss_kd: 0.5875 (0.519) LR: 5.000e-02
+2025-09-11 04:49:22,354 -                train: [    INFO] - Test: [   0/39]  Time: 0.493 (0.493)  Loss:  1.2743 (1.2743)  Acc@1: 67.1875 (67.1875)  Acc@5: 91.4062 (91.4062)
+2025-09-11 04:49:25,363 -                train: [    INFO] - Test: [  39/39]  Time: 0.021 (0.088)  Loss:  1.6908 (1.5077)  Acc@1: 62.5000 (60.7000)  Acc@5: 81.2500 (88.1800)
+2025-09-11 04:49:25,488 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-18.pth.tar', 60.7)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-17.pth.tar', 58.78)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-16.pth.tar', 58.68)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-15.pth.tar', 54.65)
+
+2025-09-11 04:49:26,236 -                train: [    INFO] - Train: 19 [   0/195 (  0%)]  Loss: 38.90 (38.9)  Loss_cat: 7.352 (7.35)  Loss_feat: 28.71 (28.7)  Loss_gt: 2.348 (2.35)  Loss_kd: 0.4882 (0.488) LR: 5.000e-02
+2025-09-11 04:50:50,079 -                train: [    INFO] - Train: 19 [ 194/195 (100%)]  Loss: 40.01 (39.7)  Loss_cat: 7.880 (7.66)  Loss_feat: 28.86 (28.9)  Loss_gt: 2.713 (2.56)  Loss_kd: 0.5530 (0.518) LR: 5.000e-02
+2025-09-11 04:50:50,508 -                train: [    INFO] - Test: [   0/39]  Time: 0.411 (0.411)  Loss:  1.4240 (1.4240)  Acc@1: 65.2344 (65.2344)  Acc@5: 88.2812 (88.2812)
+2025-09-11 04:50:53,400 -                train: [    INFO] - Test: [  39/39]  Time: 0.022 (0.083)  Loss:  1.2662 (1.5383)  Acc@1: 75.0000 (60.5300)  Acc@5: 81.2500 (88.5100)
+2025-09-11 04:50:59,780 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-18.pth.tar', 60.7)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-19.pth.tar', 60.53)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-17.pth.tar', 58.78)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-16.pth.tar', 58.68)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-11.pth.tar', 55.64)
+
+2025-09-11 04:51:00,596 -                train: [    INFO] - Train: 20 [   0/195 (  0%)]  Loss: 38.89 (38.9)  Loss_cat: 7.335 (7.33)  Loss_feat: 28.76 (28.8)  Loss_gt: 2.366 (2.37)  Loss_kd: 0.4371 (0.437) LR: 5.000e-02
+2025-09-11 04:52:24,400 -                train: [    INFO] - Train: 20 [ 194/195 (100%)]  Loss: 38.36 (39.5)  Loss_cat: 7.106 (7.61)  Loss_feat: 28.30 (28.9)  Loss_gt: 2.490 (2.54)  Loss_kd: 0.4674 (0.516) LR: 5.000e-02
+2025-09-11 04:52:24,821 -                train: [    INFO] - Test: [   0/39]  Time: 0.401 (0.401)  Loss:  1.4144 (1.4144)  Acc@1: 64.4531 (64.4531)  Acc@5: 89.0625 (89.0625)
+2025-09-11 04:52:27,838 -                train: [    INFO] - Test: [  39/39]  Time: 0.026 (0.085)  Loss:  1.3961 (1.4704)  Acc@1: 62.5000 (61.3600)  Acc@5: 93.7500 (89.3400)
+2025-09-11 04:52:33,393 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-20.pth.tar', 61.36)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-18.pth.tar', 60.7)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-19.pth.tar', 60.53)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-17.pth.tar', 58.78)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-16.pth.tar', 58.68)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-10.pth.tar', 57.03)
+
+2025-09-11 04:52:34,251 -                train: [    INFO] - Train: 21 [   0/195 (  0%)]  Loss: 39.95 (39.9)  Loss_cat: 7.753 (7.75)  Loss_feat: 28.94 (28.9)  Loss_gt: 2.698 (2.70)  Loss_kd: 0.5586 (0.559) LR: 5.000e-02
+2025-09-11 04:53:58,584 -                train: [    INFO] - Train: 21 [ 194/195 (100%)]  Loss: 39.66 (39.4)  Loss_cat: 7.846 (7.55)  Loss_feat: 28.66 (28.8)  Loss_gt: 2.622 (2.54)  Loss_kd: 0.5275 (0.508) LR: 5.000e-02
+2025-09-11 04:53:59,080 -                train: [    INFO] - Test: [   0/39]  Time: 0.479 (0.479)  Loss:  1.4891 (1.4891)  Acc@1: 59.7656 (59.7656)  Acc@5: 86.7188 (86.7188)
+2025-09-11 04:54:02,044 -                train: [    INFO] - Test: [  39/39]  Time: 0.024 (0.086)  Loss:  1.8651 (1.7462)  Acc@1: 43.7500 (55.1900)  Acc@5: 75.0000 (83.9000)
+2025-09-11 04:54:02,972 -                train: [    INFO] - Train: 22 [   0/195 (  0%)]  Loss: 39.54 (39.5)  Loss_cat: 7.693 (7.69)  Loss_feat: 28.71 (28.7)  Loss_gt: 2.566 (2.57)  Loss_kd: 0.5759 (0.576) LR: 5.000e-02
+2025-09-11 04:55:26,998 -                train: [    INFO] - Train: 22 [ 194/195 (100%)]  Loss: 40.02 (39.3)  Loss_cat: 7.948 (7.52)  Loss_feat: 28.79 (28.8)  Loss_gt: 2.707 (2.52)  Loss_kd: 0.5787 (0.505) LR: 5.000e-02
+2025-09-11 04:55:27,450 -                train: [    INFO] - Test: [   0/39]  Time: 0.431 (0.431)  Loss:  1.2169 (1.2169)  Acc@1: 68.7500 (68.7500)  Acc@5: 89.8438 (89.8438)
+2025-09-11 04:55:30,572 -                train: [    INFO] - Test: [  39/39]  Time: 0.023 (0.089)  Loss:  1.3934 (1.3868)  Acc@1: 68.7500 (63.3400)  Acc@5: 75.0000 (89.9800)
+2025-09-11 04:55:30,731 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-22.pth.tar', 63.34)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-20.pth.tar', 61.36)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-18.pth.tar', 60.7)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-19.pth.tar', 60.53)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-17.pth.tar', 58.78)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-16.pth.tar', 58.68)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-9.pth.tar', 57.45)
+
+2025-09-11 04:55:31,485 -                train: [    INFO] - Train: 23 [   0/195 (  0%)]  Loss: 37.58 (37.6)  Loss_cat: 6.808 (6.81)  Loss_feat: 27.95 (28.0)  Loss_gt: 2.369 (2.37)  Loss_kd: 0.4516 (0.452) LR: 5.000e-02
+2025-09-11 04:56:55,733 -                train: [    INFO] - Train: 23 [ 194/195 (100%)]  Loss: 39.00 (39.2)  Loss_cat: 7.460 (7.50)  Loss_feat: 28.67 (28.7)  Loss_gt: 2.393 (2.52)  Loss_kd: 0.4729 (0.504) LR: 5.000e-02
+2025-09-11 04:56:56,164 -                train: [    INFO] - Test: [   0/39]  Time: 0.415 (0.415)  Loss:  1.4435 (1.4435)  Acc@1: 65.2344 (65.2344)  Acc@5: 89.0625 (89.0625)
+2025-09-11 04:56:59,162 -                train: [    INFO] - Test: [  39/39]  Time: 0.022 (0.085)  Loss:  1.4089 (1.5333)  Acc@1: 68.7500 (60.8800)  Acc@5: 87.5000 (88.6400)
+2025-09-11 04:56:59,294 - timm.utils.checkpoint_saver: [    INFO] - Current checkpoints:
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-22.pth.tar', 63.34)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-20.pth.tar', 61.36)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-23.pth.tar', 60.88)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-18.pth.tar', 60.7)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-19.pth.tar', 60.53)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-13.pth.tar', 60.3)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-12.pth.tar', 60.05)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-17.pth.tar', 58.78)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-16.pth.tar', 58.68)
+ ('./output/train/20250911-042109-mobilenetv2_vcaV2-224/checkpoint/checkpoint-14.pth.tar', 58.56)
+
+2025-09-11 04:57:00,093 -                train: [    INFO] - Train: 24 [   0/195 (  0%)]  Loss: 39.17 (39.2)  Loss_cat: 7.425 (7.43)  Loss_feat: 28.63 (28.6)  Loss_gt: 2.614 (2.61)  Loss_kd: 0.5029 (0.503) LR: 5.000e-02
+2025-09-11 04:58:24,549 -                train: [    INFO] - Train: 24 [ 194/195 (100%)]  Loss: 38.15 (39.1)  Loss_cat: 6.905 (7.45)  Loss_feat: 28.23 (28.7)  Loss_gt: 2.544 (2.51)  Loss_kd: 0.4704 (0.495) LR: 5.000e-02
+2025-09-11 04:58:25,051 -                train: [    INFO] - Test: [   0/39]  Time: 0.478 (0.478)  Loss:  1.4500 (1.4500)  Acc@1: 62.8906 (62.8906)  Acc@5: 90.6250 (90.6250)
+2025-09-11 04:58:28,297 -                train: [    INFO] - Test: [  39/39]  Time: 0.024 (0.093)  Loss:  1.8766 (1.7173)  Acc@1: 43.7500 (55.5900)  Acc@5: 87.5000 (84.4300)
+2025-09-11 04:58:29,213 -                train: [    INFO] - Train: 25 [   0/195 (  0%)]  Loss: 39.64 (39.6)  Loss_cat: 7.910 (7.91)  Loss_feat: 28.70 (28.7)  Loss_gt: 2.523 (2.52)  Loss_kd: 0.5054 (0.505) LR: 5.000e-02
+2025-09-11 04:58:49,726 -                train: [    INFO] - *** Best metric: 63.34 (epoch 22)

@@ -1,0 +1,18 @@
+2025-09-13 15:24:25,440 -                train: [    INFO] - Training with a single process on 1 GPUs.
+2025-09-13 15:24:27,563 -  timm.models.helpers: [    INFO] - Loaded  from checkpoint '/nfs4/wangyb/projects/OFAKD/teacher_checkpoint/swin_tiny_patch4_window7_224_cifar100.pth'
+2025-09-13 15:24:28,006 -                train: [    INFO] - Model resnet18_vcaV2 created, param count:13011340
+2025-09-13 15:24:28,006 -     timm.data.config: [    INFO] - Data processing configuration for current model + dataset:
+2025-09-13 15:24:28,006 -     timm.data.config: [    INFO] - 	input_size: (3, 224, 224)
+2025-09-13 15:24:28,008 -     timm.data.config: [    INFO] - 	interpolation: bicubic
+2025-09-13 15:24:28,008 -     timm.data.config: [    INFO] - 	mean: (0.485, 0.456, 0.406)
+2025-09-13 15:24:28,008 -     timm.data.config: [    INFO] - 	std: (0.229, 0.224, 0.225)
+2025-09-13 15:24:28,008 -     timm.data.config: [    INFO] - 	crop_pct: 0.875
+2025-09-13 15:24:32,677 -                train: [    INFO] - 
+-------------------------------
+Learnable parameters
+Student: 13.01M
+Extra: 0.00M
+-------------------------------
+2025-09-13 15:24:32,819 -                train: [    INFO] - AMP not enabled. Training in float32.
+2025-09-13 15:24:32,819 -                train: [    INFO] - Scheduled epochs: 300
+2025-09-13 15:24:36,133 -                train: [    INFO] - Train: 0 [   0/390 (  0%)]  Loss: 60.79 (60.8)  Loss_cat: 6.033 (6.03)  Loss_feat: 50.14 (50.1)  Loss_gt: 4.612 (4.61) LR: 1.000e-04
