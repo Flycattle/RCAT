@@ -1,0 +1,33 @@
+# === Training schedule ===
+epochs: 100
+batch_size: 128             # per-GPU，4卡总 512
+opt: sgd
+lr: 0.1                     # ResNet-18 容量更大，global batch=512 可用 0.4
+sched: cosine
+warmup_epochs: 3
+warmup_lr: 1e-6
+weight_decay: 1e-4          # ResNet 系列通常用 1e-4
+
+# === Regularization / Augment ===
+smoothing: 0.05             # KD 下 label smoothing 不宜过大
+drop: 0
+drop_path: 0.0
+aa: rand-m7-mstd0.5
+color_jitter: 0.4
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+
+# === Mixup / Cutmix ===
+mixup: 0.2                  # 轻量 mixup
+cutmix: 0.0                 # KD 场景关掉 cutmix，避免扰乱特征
+mixup-prob: 1.0
+mixup-switch-prob: 0.0
+mixup-mode: batch
+
+# === Misc ===
+crop_pct: 0.95
+bce_loss: false
+model_ema: False
+

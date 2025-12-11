@@ -1,0 +1,12 @@
+epochs: 50            # 只训分类头，通常几十个 epoch 就够了
+batch_size: 128
+lr: 0.1               # head 参数少，可以适当加大学习率
+min_lr: 1e-4          # 最小学习率降到更低
+opt: sgd
+weight_decay: 0.0     # 线性头不加正则更常见
+sched: cosine
+warmup_epochs: 3
+color_jitter: 0
+smoothing: 0.1
+# 这里的配置是针对 DINOv2 的分类头训练
+# 你可以根据需要调整这些参数

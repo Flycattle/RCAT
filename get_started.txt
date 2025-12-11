@@ -1,0 +1,79 @@
+ ##First: cifar100:
+ # dionv2s —> resnet18
+ CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/OFAKD/data/cifar100 --config /nfs4/wangyb/projects/RCAT/configs/cifar/cnn.yaml \
+  --model resnet18_proj_dim_384 --teacher dinov2s_finetuehead  --teacher-pretrained /nfs4/wangyb/projects/OFAKD/teacher_checkpoint/dinov2_cifar100_head_best.pth \
+  -d cifar100 --num-classes 100  --distiller rcat
+ # dionv2s —> mobilenetv2
+   CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/OFAKD/data/cifar100 --config /nfs4/wangyb/projects/RCAT/configs/cifar/cnn.yaml \
+  --model mobilenetv2_proj_dim384 --teacher dinov2s_finetuehead  --teacher-pretrained /nfs4/wangyb/projects/OFAKD/teacher_checkpoint/dinov2_cifar100_head_best.pth \
+  -d cifar100 --num-classes 100  --distiller rcat
+ # swin-T —> resnet18
+    CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data/cifar100 --config /nfs4/wangyb/projects/RCAT/configs/cifar/cnn.yaml \
+  --model resnet18_proj_dim_768 --teacher swin_tiny_patch4_window7_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/swin_tiny_patch4_window7_224_cifar100.pth \
+  -d cifar100 --num-classes 100  --distiller rcat
+ # swin-T —> mobilenetv2
+    CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data/cifar100 --config /nfs4/wangyb/projects/RCAT/configs/cifar/cnn.yaml \
+  --model mobilenetv2_proj_dim768 --teacher swin_tiny_patch4_window7_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/swin_tiny_patch4_window7_224_cifar100.pth \
+  -d cifar100 --num-classes 100  --distiller vca
+ # ViT-S —> resnet18
+ CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/OFAKD/data/cifar100 --config /nfs4/wangyb/projects/RCAT/configs/cifar/cnn.yaml \
+  --model resnet18_proj_dim_384 --teacher vit_small_patch16_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/vit_small_patch16_224_cifar100.pth \
+  -d cifar100 --num-classes 100  --distiller rcat
+ # ViT-S —> mobilenetv2
+   CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/OFAKD/data/cifar100 --config /nfs4/wangyb/projects/RCAT/configs/cifar/cnn.yaml \
+  --model mobilenetv2_proj_dim384 --teacher vit_small_patch16_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/vit_small_patch16_224_cifar100.pth \
+  -d cifar100 --num-classes 100  --distiller rcat
+
+
+ ##Second: tiny-imagenet:
+ # dionv2s —> resnet18
+ CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data --config /nfs4/wangyb/projects/RCAT/configs/tiny_imagenet/dot/rcat.yaml \
+  --model resnet18_proj_dim_384 --teacher dinov2s_finetuehead  --teacher-pretrained /nfs4/wangyb/projects/OFAKD/teacher_checkpoint/dinov2_cifar100_head_best.pth \
+  -d tiny-imagenet-200 --num-classes 200  --distiller rcat
+ # dionv2s —> mobilenetv2
+   CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data --config /nfs4/wangyb/projects/RCAT/configs/tiny_imagenet/dot/rcat.yaml \
+  --model mobilenetv2_proj_dim384 --teacher dinov2s_finetuehead  --teacher-pretrained /nfs4/wangyb/projects/OFAKD/teacher_checkpoint/dinov2_cifar100_head_best.pth \
+  -d tiny-imagenet-200 --num-classes 200  --distiller rcat
+ # swin-T —> resnet18
+    CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data --config /nfs4/wangyb/projects/RCAT/configs/tiny_imagenet/dot/rcat.yaml \
+  --model resnet18_proj_dim_768 --teacher swin_tiny_patch4_window7_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/swin_tiny_patch4_window7_224_tiny_imagenet.pth \
+  -d tiny-imagenet-200 --num-classes 200  --distiller rcat
+ # swin-T —> mobilenetv2
+    CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data --config /nfs4/wangyb/projects/RCAT/configs/tiny_imagenet/dot/rcat.yaml \
+  --model mobilenetv2_proj_dim768 --teacher swin_tiny_patch4_window7_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/swin_tiny_patch4_window7_224_tiny_imagenet.pth \
+  -d tiny-imagenet-200 --num-classes 200  --distiller vca
+ # ViT-S —> resnet18
+ CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data --config /nfs4/wangyb/projects/RCAT/configs/tiny_imagenet/dot/rcat.yaml \
+  --model resnet18_proj_dim_384 --teacher vit_small_patch16_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/vit_small_patch16_224_tiny_imagenet.pth \
+  -d tiny-imagenet-200 --num-classes 200  --distiller rcat
+ # ViT-S —> mobilenetv2
+   CUDA_VISIBLE_DEVICES=0 python /nfs4/wangyb/projects/RCAT/train.py\
+    /nfs4/wangyb/projects/RCAT/data --config /nfs4/wangyb/projects/RCAT/configs/tiny_imagenet/dot/rcat.yaml \
+  --model mobilenetv2_proj_dim384 --teacher vit_small_patch16_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/vit_small_patch16_224_tiny_imagenet.pth \
+  -d tiny-imagenet-200 --num-classes 200  --distiller rcat
+
+ ## Third: imagenet:
+ # --swin_tiny_patch4_window7_224 -> mobilenetv2_vcaV2
+多卡：
+screen -S vca bash -c '\
+torchrun --nproc_per_node=4 --master_port=29501 /nfs4/wangyb/projects/RCAT/train2.py\
+  /nfs4/wangyb/projects/RCAT/data/imagenet --config /nfs4/wangyb/projects/RCAT/configs/imagenet/vca_rn.yaml \
+  --model resnet18_vcaV2 --teacher swin_tiny_patch4_window7_224  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/swin_tiny_patch4_window7_224.pth \
+  -d imagenet --num-classes 1000   --distiller vca --sync-bn '
+单卡：
+CUDA_VISIBLE_DEVICES=2 python /nfs4/wangyb/projects/RCAT/train.py\
+  /nfs4/wangyb/projects/RCAT/data/imagenet --config /nfs4/wangyb/projects/RCAT/configs/imagenet/cnn.yaml \
+  --model resnet18_proj_dim_384 --teacher dinov2s  --teacher-pretrained /nfs4/wangyb/projects/RCAT/teacher_checkpoint/vit_base_patch16_224.pth \
+  -d imagenet --num-classes 1000   --distiller vca --sync-bn
+

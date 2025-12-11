@@ -1,0 +1,18 @@
+2025-10-28 13:34:44,495 -                train: [    INFO] - Training with a single process on 1 GPUs.
+2025-10-28 13:34:45,379 -               dinov2: [    INFO] - using MLP layer as FFN
+2025-10-28 13:34:53,176 -                train: [    INFO] - Model resnet18 created, param count:11227812
+2025-10-28 13:34:53,200 -     timm.data.config: [    INFO] - Data processing configuration for current model + dataset:
+2025-10-28 13:34:53,200 -     timm.data.config: [    INFO] - 	input_size: (3, 224, 224)
+2025-10-28 13:34:53,200 -     timm.data.config: [    INFO] - 	interpolation: bilinear
+2025-10-28 13:34:53,203 -     timm.data.config: [    INFO] - 	mean: (0.485, 0.456, 0.406)
+2025-10-28 13:34:53,207 -     timm.data.config: [    INFO] - 	std: (0.229, 0.224, 0.225)
+2025-10-28 13:34:53,208 -     timm.data.config: [    INFO] - 	crop_pct: 0.875
+2025-10-28 13:34:59,540 -                train: [    INFO] - 
+-------------------------------
+Learnable parameters
+Student: 11.23M
+Extra: 0.00M
+-------------------------------
+2025-10-28 13:35:00,008 -                train: [    INFO] - AMP not enabled. Training in float32.
+2025-10-28 13:35:00,008 -                train: [    INFO] - Scheduled epochs: 300
+2025-10-28 13:35:08,620 -                train: [    INFO] - Train: 0 [   0/390 (  0%)]  Loss: 8.784 (8.78)  Loss_gt: 4.654 (4.65)  Loss_kd: 4.131 (4.13) LR: 1.000e-04

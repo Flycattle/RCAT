@@ -1,0 +1,34 @@
+# === Training schedule ===
+epochs: 100                # 保持和对比方法一致
+batch_size: 128            # per-GPU batch，4卡总 512
+opt: sgd                   # MobileNetV2 更适合 SGD + momentum
+lr: 0.2                    # global batch=512 时的线性缩放 lr
+sched: cosine              # 比 step 更平滑
+warmup_epochs: 3           # 前 3 ep warmup
+warmup_lr: 1e-6            # warmup 初始 lr
+weight_decay: 5e-5         # MobileNetV2 通常用更低 WD（默认 1e-4 偏大）
+
+# === Regularization / Augment ===
+smoothing: 0.05            # CE 的 smoothing，KD 已经有 soft target，不要太大
+drop: 0                    # dropout 不要开
+drop_path: 0.0             # 轻量 CNN 用处不大
+aa: rand-m7-mstd0.5        # AutoAugment (RandAugment) 推荐开启
+color_jitter: 0.4          # ImageNet 标配
+reprob: 0.25               # Random Erasing 概率
+remode: pixel              # 默认就行
+recount: 1
+resplit: False
+
+# === Mixup / Cutmix ===
+mixup: 0.2                 # 轻量开启 mixup
+cutmix: 0.0                # KD 场景不建议强 cutmix，会扰乱蒸馏特征
+mixup-prob: 1.0
+mixup-switch-prob: 0.0
+mixup-mode: batch
+
+# === Misc ===
+crop_pct: 0.95
+bce_loss: false            # KD 用 CE+KL，不建议 bce_loss
+model_ema: true            # EMA 很推荐
+model_ema_decay:   
+  - 0.9999

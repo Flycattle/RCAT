@@ -1,0 +1,52 @@
+# vits -> ResNet18
+EXPERIMENT:
+  NAME: ""
+  TAG: "at,vits,ResNet18,cosinebeta,bs256,lr0.1"
+  # TAG: "at,dinov2s,ResNet18,cosinebeta,bs256,224,lr0.05"
+  # TAG: "at,dinov2b,ResNet50,1000"
+  PROJECT: "tiny_imagenet_dinokd"
+DATASET:
+  TYPE: "tiny_imagenet"
+  NUM_WORKERS: 16
+DISTILLER:
+  TYPE: "AT"
+  TEACHER: "vit_small_patch16_224"
+  STUDENT: "resnet18_vitkd"
+SOLVER:
+  BATCH_SIZE: 256
+  EPOCHS: 200
+  LR: 0.05
+  LR_DECAY_STAGES: [60, 120, 160]
+  LR_DECAY_RATE: 0.1
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+LOG:
+  PREFIX: "/nfs4/wangyb/projects/mdistiller/AToutput_ongoing"
+
+# # dinov2s -> ResNet18
+# EXPERIMENT:
+#   NAME: ""
+#   TAG: "at,dinov2s,ResNet18,dybetav2"
+#   # TAG: "at,dinov2s,ResNet18,cosinebeta,bs256,224,lr0.05"
+#   # TAG: "at,dinov2b,ResNet50,1000"
+#   PROJECT: "tiny_imagenet_dinokd"
+# DATASET:
+#   TYPE: "tiny_imagenet"
+#   NUM_WORKERS: 16
+# DISTILLER:
+#   TYPE: "AT"
+#   TEACHER: "dinov2"
+#   STUDENT: "resnet18_dinokd"
+# SOLVER:
+#   BATCH_SIZE: 64
+#   EPOCHS: 200
+#   LR: 0.05
+#   LR_DECAY_STAGES: [60, 120, 160]
+#   LR_DECAY_RATE: 0.05
+#   WEIGHT_DECAY: 0.0005
+#   MOMENTUM: 0.9
+#   TYPE: "SGD"
+# LOG:
+#   PREFIX: "/nfs4/wangyb/projects/mdistiller/AToutput_ongoing"
+

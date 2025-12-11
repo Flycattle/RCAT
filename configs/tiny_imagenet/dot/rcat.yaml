@@ -1,0 +1,12 @@
+epochs: 200
+batch_size: 256
+lr: 0.05
+min_lr: 1e-3
+opt: sgd
+weight_decay: 2e-3
+sched: multistep
+warmup_epochs: 3
+color_jitter: 0
+smoothing: 0.1
+# decay_milestones: [150,180,210]
+decay_milestones: [60,120,160]
