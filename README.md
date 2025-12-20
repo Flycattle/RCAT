@@ -39,18 +39,17 @@ CUDA_VISIBLE_DEVICES=0 python train.py
 注意：train.py --config --teacher-pretrained /data/cifar100 这四项换成你的路径
 
 
-Efficiency：swint-mobilenetv2 (Tiny-imagenet):
+Efficiency：
+SwinT-to-Mobilenetv2 (Tiny-imagenet):
 <img width="1147" height="997" alt="image" src="https://github.com/user-attachments/assets/46a231bd-6775-4d13-a3cd-1a3150016cec" />
-And We evaluated parameters, training latency(standard for KD efficiency), and Top-1-Accuracy on Tiny-ImageNet(Dinov2s-to-ResNet18 ):
--KD:11.28M/135s/66.23%
--OFA:12.71M/141s/68.67%
--ScaleKD:12.88M/145s/69.23%
--RCAT(Ours):12.59M/138s/70.67%
+Dinov2s-to-ResNet18(Tiny-ImageNet):
+<img width="643" height="218" alt="image" src="https://github.com/user-attachments/assets/e6fd1319-757a-4c72-acb2-969364ce3b5a" />
+
 
 
 消融：
 ρ： CIFAR100: dinov2s-to-ResNet18  
-<img width="264" height="213" alt="image" src="https://github.com/user-attachments/assets/7b6d3998-bee9-4e64-8dd8-e8c2050286a2" />
+<img width="305" height="160" alt="image" src="https://github.com/user-attachments/assets/e04cde7a-638f-459c-a3c2-53f77eba0f51" />
 
 ρ (超参数)	准确率 (Accuracy)
 0.4	83.15%
