@@ -235,10 +235,35 @@ def get_CAM(model, feat_map, arch=None, dataset=None, target_idx=None):
     # cams = F.interpolate(cams, size=(224, 224), mode="bilinear", align_corners=False)
     return cams
 
-def CAT_loss(CAM_Student, CAM_Teacher, CAM_RESOLUTION):
+def CAT_loss(CAM_Student, CAM_Teacher, CAM_RESOLUTION, rho=0.8):
+    """
+    计算基于随机掩码对齐的 CAM 损失。
+    
+    Args:
+        rho (float): 掩码比例，默认为 0.8。表示有 80% 的元素会被用于计算损失。
+    """
+    # 1. 调整分辨率 (保持原有逻辑)
     CAM_Student = F.adaptive_avg_pool2d(CAM_Student, (CAM_RESOLUTION, CAM_RESOLUTION))
     CAM_Teacher = F.adaptive_avg_pool2d(CAM_Teacher, (CAM_RESOLUTION, CAM_RESOLUTION))
-    loss = F.mse_loss(F.normalize(CAM_Student), F.normalize(CAM_Teacher))
+    
+    # 2. 归一化 (保持原有逻辑)
+    # 注意：通常建议在 mask 之前做归一化，保证特征分布的完整性
+    S_norm = F.normalize(CAM_Student)
+    T_norm = F.normalize(CAM_Teacher)
+    
+    # 3. 应用随机掩码 (新增逻辑)
+    if rho < 1.0 and rho > 0.0:
+        # 生成与特征图形状相同的随机矩阵，值在 [0, 1) 之间
+        # 如果随机值小于 rho，则 mask 为 True (保留)，否则为 False (丢弃)
+        mask = torch.rand_like(S_norm) < rho
+        
+        # 使用掩码筛选元素。
+        # 注意：S_norm[mask] 会将张量展平 (flatten) 为一维向量，只包含 mask 为 True 的元素
+        loss = F.mse_loss(S_norm[mask], T_norm[mask])
+    else:
+        # 如果 rho >= 1.0，则进行全量对齐 (原有逻辑)
+        loss = F.mse_loss(S_norm, T_norm)
+        
     return loss
 
 
