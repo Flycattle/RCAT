@@ -11,6 +11,8 @@ The training log can be viewed in the /output/train directory. 训练日志可�
 
 下面涉及到路径的地方，需要更换为自己的路径，例如"train.py"(替换为你的 train.py 路径) "--config xxxx"（xxx 替换为你的配置文件路径） "--teacher-pretrained xxxx" （xxxx 替换为你的教师模型文件路径）"/data/cifar100"（替换为你的数据集所在路径）这四项换成你的路径
 
+To reproduce, refer to the file get_start.txt
+For path-related sections, replace the following with your own paths: "train.py" (replace with your train.py path), "--config xxxx" (replace xxxx with your configuration file path), "--teacher-pretrained xxxx" (replace xxxx with your teacher model file path), and "/data/cifar100" (replace with your dataset path).
 
 For example, use the command for our method-RCAT:
 
@@ -28,7 +30,7 @@ use the command for other baseline methods:
 
 
 使用该指令对其他基线方法：
-
+Use this command for other baseline methods:
 
 CUDA_VISIBLE_DEVICES=0 python train.py
 /data/cifar100 --config configs/cifar/cnn.yaml
@@ -46,15 +48,20 @@ Dinov2s-to-ResNet18(Tiny-ImageNet):
 
 
 
-消融：
+消融：(ablation)
+
 ρ： CIFAR100: dinov2s-to-ResNet18  
 <img width="305" height="160" alt="image" src="https://github.com/user-attachments/assets/e04cde7a-638f-459c-a3c2-53f77eba0f51" />
 
 ρ (超参数)	准确率 (Accuracy)
-0.4	83.15%
-0.6	84.02%
-0.8	84.18% (Best)
-1	83.65%
+0.4	  83.15%
+0.6	  84.02%
+0.8	  84.18% (Best)
+1	    83.65%
+β和γ在表一中做了两个模块的分析，更多的消融结果如下：
+β and γ conducted analyses of two modules in Table 1, with additional ablation results as follows:
+<img width="880" height="272" alt="image" src="https://github.com/user-attachments/assets/8e2c1410-38bc-4412-a0c2-7f6d537c0ea6" />
+
 
 
 
