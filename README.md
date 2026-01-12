@@ -58,7 +58,9 @@ Dinov2s-to-ResNet18(Tiny-ImageNet):
 0.6	  84.02%
 0.8	  84.18% (Best)
 1	    83.65%
+
 β和γ在表一中做了两个模块的分析，更多的消融结果如下：
+
 β and γ conducted analyses of two modules in Table 1, with additional ablation results as follows:
 <img width="880" height="272" alt="image" src="https://github.com/user-attachments/assets/8e2c1410-38bc-4412-a0c2-7f6d537c0ea6" />
 
